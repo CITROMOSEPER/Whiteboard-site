@@ -14,6 +14,8 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 ROOT = Path(__file__).resolve().parent.parent
 APP = sys.argv[1] if len(sys.argv) > 1 else 'https://citromoseper.github.io/Whiteboard/'
 OUT = ROOT / 'img' / 'shots'
@@ -31,6 +33,26 @@ SKETCH = r'''
   H.stroke([[470, 228], [570, 222]], { width: 5, smooth: false, shape: 'line' });
   H.stroke([[552, 208], [572, 222], [553, 238]], { width: 5, smooth: false });
   H.redraw(); await H.sleep(300);
+'''
+
+GALLERY = r'''
+  await H.menu('gallery'); await H.sleep(500);
+  H.byText('#gallery button', 'Keep it in this browser').click(); await H.sleep(900);
+  const mk = (title, draw) => {
+    const s = []; draw(s);
+    return new File([WB.serialize({ title, created: Date.now(), pages: [], strokes: s }, { x: 0, y: 0, zoom: 1 })], title + '.whtbd');
+  };
+  const pen = (pts, color, w = 5) => ({ tool: 'pen', color, width: w, opacity: 1, smooth: true, closed: false, points: pts.flat() });
+  const ring = (cx, cy, r, color) => { const p = []; for (let i = 0; i < 64; i++) { const a = i / 64 * 6.283; p.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]); } return Object.assign(pen(p, color, 6), { closed: true }); };
+  const files = [
+    mk('Biology notes', (s) => { s.push({ tool: 'text', x: 0, y: 0, rot: 0, text: 'Cell structure', font: 'hand', size: 40, color: H.ink(), opacity: 1, width: 0 }); s.push(ring(160, 200, 90, '#34c759'), ring(150, 210, 30, '#af52de')); }),
+    mk('Trip plan', (s) => { s.push(pen([[0, 100], [80, 40], [160, 120], [240, 60], [320, 110]], '#007aff', 7)); s.push({ tool: 'text', x: 0, y: 140, rot: 0, text: 'Day 1 → Day 4', font: 'hand', size: 36, color: H.ink(), opacity: 1, width: 0 }); }),
+    mk('Logo ideas', (s) => { s.push(ring(100, 100, 70, '#ff9500'), ring(260, 100, 70, '#ff3b30')); s.push(pen([[40, 220], [320, 220]], H.ink(), 6)); }),
+    mk('Maths homework', (s) => { s.push({ tool: 'text', x: 0, y: 0, rot: 0, text: '∫ x² dx = x³/3', font: 'hand', size: 44, color: H.ink(), opacity: 1, width: 0 }); s.push(pen([[0, 90], [300, 90]], '#ff3b30', 4)); }),
+  ];
+  const dt = new DataTransfer(); files.forEach((f) => dt.items.add(f));
+  const inp = H.$('#addboards-input'); inp.files = dt.files; inp.dispatchEvent(new Event('change')); await H.sleep(2200);
+  H.$('#toast').classList.remove('on');
 '''
 
 SCENES = {
@@ -124,30 +146,17 @@ SCENES = {
   H.arrow([p[0] + 200, p[1] + 30], '#page-add-top', -0.25);
 ''',
     # ---- Saving and sharing
-    'save-gallery': SKETCH + r'''
-  await H.menu('gallery'); await H.sleep(500);
-  H.byText('#gallery button', 'Keep it in this browser').click(); await H.sleep(900);
-  const mk = (title, draw) => {
-    const s = []; draw(s);
-    return new File([WB.serialize({ title, created: Date.now(), pages: [], strokes: s }, { x: 0, y: 0, zoom: 1 })], title + '.whtbd');
-  };
-  const pen = (pts, color, w = 5) => ({ tool: 'pen', color, width: w, opacity: 1, smooth: true, closed: false, points: pts.flat() });
-  const ring = (cx, cy, r, color) => { const p = []; for (let i = 0; i < 64; i++) { const a = i / 64 * 6.283; p.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]); } return Object.assign(pen(p, color, 6), { closed: true }); };
-  const files = [
-    mk('Biology notes', (s) => { s.push({ tool: 'text', x: 0, y: 0, rot: 0, text: 'Cell structure', font: 'hand', size: 40, color: H.ink(), opacity: 1, width: 0 }); s.push(ring(160, 200, 90, '#34c759'), ring(150, 210, 30, '#af52de')); }),
-    mk('Trip plan', (s) => { s.push(pen([[0, 100], [80, 40], [160, 120], [240, 60], [320, 110]], '#007aff', 7)); s.push({ tool: 'text', x: 0, y: 140, rot: 0, text: 'Day 1 → Day 4', font: 'hand', size: 36, color: H.ink(), opacity: 1, width: 0 }); }),
-    mk('Logo ideas', (s) => { s.push(ring(100, 100, 70, '#ff9500'), ring(260, 100, 70, '#ff3b30')); s.push(pen([[40, 220], [320, 220]], H.ink(), 6)); }),
-    mk('Maths homework', (s) => { s.push({ tool: 'text', x: 0, y: 0, rot: 0, text: '∫ x² dx = x³/3', font: 'hand', size: 44, color: H.ink(), opacity: 1, width: 0 }); s.push(pen([[0, 90], [300, 90]], '#ff3b30', 4)); }),
-  ];
-  const dt = new DataTransfer(); files.forEach((f) => dt.items.add(f));
-  const inp = H.$('#addboards-input'); inp.files = dt.files; inp.dispatchEvent(new Event('change')); await H.sleep(2200);
-  H.$('#toast').classList.remove('on');
+    'save-gallery': SKETCH + GALLERY + r'''
   const tile = document.querySelector('#g-grid > *');
   H.ring(tile, 6, 13);
-  const links = [...document.querySelectorAll('#g-foot button')].find((b) => b.textContent.startsWith('Back up'));
-  H.ring(links, 6, 14);
   const r = H.rect(tile);
   H.arrow([r.x + r.w + 170, r.y + r.h + 40], tile, -0.25);
+''',
+    'save-backup': SKETCH + GALLERY + r'''
+  const links = [...document.querySelectorAll('#g-foot .g-link')].filter((b) => /^(Back up|Restore|Add boards)/.test(b.textContent));
+  for (const [k, l] of links.entries()) H.ring(l, 5, 52 + k);
+  const r = H.rect(links[0]);
+  H.arrow([r.x + 60, r.y - 170], links[0], 0.25);
 ''',
     'save-export': SKETCH + r'''
   await H.menu('export'); await H.sleep(300);
@@ -163,6 +172,10 @@ SCENES = {
   H.arrow([r.x + r.w + 120, r.y - 110], '#share-copy', -0.3);
 ''',
 }
+
+
+from scenes_more import scenes as _more
+SCENES.update(_more(SKETCH))
 
 
 def main():

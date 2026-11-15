@@ -9,11 +9,19 @@ window.SITE = {
   ],
   /* Tutorials: steps with their screenshot (img/shots/<shot>-light|dark.webp, made by tools/shots.py) */
   tutorials: [
-    { key: "tutStart", steps: [{ key: "s11", shot: "start-tools" }, { key: "s12", shot: "start-brush" }, { key: "s13", shot: "start-move" }] },
-    { key: "tutShapes", steps: [{ key: "s21", shot: "shapes-snap" }, { key: "s22", shot: "shapes-fill" }, { key: "s23", shot: "shapes-style" }] },
-    { key: "tutPdf", steps: [{ key: "s31", shot: "pdf-menu" }, { key: "s32", shot: "pdf-sizes" }, { key: "s33", shot: "pdf-annotate" }] },
-    { key: "tutSave", steps: [{ key: "s41", shot: "save-gallery" }, { key: "s42", shot: "save-export" }, { key: "s43", shot: "save-share" }] },
-  ],
+    { key: "tutStart", steps: [["s11", "start-tools"], ["s12", "start-brush"], ["s13", "start-move"]] },
+    { key: "tutPen", steps: [["p1", "pen-dash"], ["p2", "pen-mixer"], ["p3", "pen-pressure"]] },
+    { key: "tutHl", steps: [["h1", "hl-highlight"], ["h2", "hl-eraser"], ["h3", "hl-laser"]] },
+    { key: "tutShapes", steps: [["s21", "shapes-snap"], ["s22", "shapes-fill"], ["c3", "shapes-recolour"]] },
+    { key: "tutSelect", steps: [["e1", "sel-lasso"], ["e2", "sel-handles"], ["s23", "shapes-style"], ["e4", "sel-bar"]] },
+    { key: "tutUndo", steps: [["u1", "scratch-out"], ["u2", "undo"]] },
+    { key: "tutText", steps: [["x1", "text-type"], ["x2", "text-ink"]] },
+    { key: "tutPics", steps: [["i1", "pic-import"], ["i2", "pic-edit"], ["i3", "sticker"]] },
+    { key: "tutPdf", steps: [["s31", "pdf-menu"], ["s32", "pdf-sizes"], ["s33", "pdf-annotate"], ["d4", "pdf-pages"]] },
+    { key: "tutFiles", steps: [["s41", "save-gallery"], ["g2", "save-file"], ["g3", "save-backup"]] },
+    { key: "tutShare", steps: [["s42", "save-export"], ["n2", "export-pattern"], ["s43", "save-share"], ["n4", "open-link"]] },
+    { key: "tutSettings", steps: [["t1", "set-theme"], ["t2", "set-pattern"], ["t3", "set-lang"]] },
+  ].map((t) => ({ key: t.key, steps: t.steps.map(([key, shot]) => ({ key, shot })) })),
   text: {},
 };
 

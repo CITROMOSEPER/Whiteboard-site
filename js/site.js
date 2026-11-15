@@ -87,6 +87,12 @@
       tabs.appendChild(b);
     });
     $('#tut-panel').setAttribute('aria-labelledby', 'tab-' + tut);
+    // On phones the tabs scroll sideways: keep the chosen one in view (without scrolling the page).
+    const sel = tabs.children[tut];
+    if (sel && tabs.scrollWidth > tabs.clientWidth) {
+      const l = sel.offsetLeft - tabs.offsetLeft, r = l + sel.offsetWidth;
+      if (l < tabs.scrollLeft || r > tabs.scrollLeft + tabs.clientWidth) tabs.scrollLeft = l - 16;
+    }
     steps.textContent = '';
     S.tutorials[tut].steps.forEach((s, i) => {
       const li = document.createElement('li'), b = document.createElement('button');

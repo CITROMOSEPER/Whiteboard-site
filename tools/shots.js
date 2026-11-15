@@ -43,7 +43,7 @@ window.H = (() => {
   }
   async function tap(x, y) { pointer('pointerdown', x, y); await sleep(20); pointer('pointerup', x, y); await sleep(60); }
   const menu = async (act) => { $('#btn-menu').click(); await sleep(250); if (act) { $(`[data-act="${act}"]`).click(); await sleep(450); } };
-  function toast(t) { $('#toast-text').textContent = t; $('#toast-action').hidden = true; $('#toast').classList.add('on'); }
+  function toast(t, action) { $('#toast-text').textContent = t; const b = $('#toast-action'); b.hidden = !action; b.textContent = action || ''; $('#toast').classList.add('on'); }
 
   /* ---- Marks ---------------------------------------------------------------- */
   const RED = '#ff3b30';

@@ -241,6 +241,12 @@ header.top nav { display: flex; flex-wrap: wrap; align-items: center; justify-co
 .steps span.t { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
 .steps button:not([aria-current="step"]) span.t { display: none; }
 @media (max-width: 860px) { .tutorial { grid-template-columns: 1fr; } }
+/* Phones: the tutorial tabs are one row that scrolls sideways. */
+@media (max-width: 720px) {
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 2px 16px 6px; scroll-snap-type: x proximity; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs button { flex: none; scroll-snap-align: start; }
+}
 
 /* ---------- Support ---------- */
 #support .wrap { padding-top: 80px; padding-bottom: 104px; }
@@ -288,8 +294,9 @@ footer.bottom .links a:hover { color: var(--accent); }
   /* Phones: one header row. The language button keeps only its globe (its label says "Language"). */
   #lang-name { display: none; }
   .lang > button { padding: 0 10px; }
-  .nav-links { gap: 4px 10px; }
+  .nav-links { gap: 4px 10px; flex-wrap: nowrap; }
   header.top nav { flex-wrap: nowrap; }
+  .brand span { display: none; }
 }
 @media (max-width: 420px) {
   .wrap { padding-left: 16px; padding-right: 16px; }
