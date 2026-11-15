@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>教程 – Whiteboard</title>
+<meta name="description" content="一款支持触控笔、手指和鼠标的快速白板，直接在浏览器中运行。形状自动规整，拖动颜色即可填充，白板保存在你自己的设备上。 每一步都标出了要点哪里。边看边试吧。">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://citromoseper.github.io/Whiteboard-site/zh/tutorials/">
+<link rel="alternate" hreflang="ar" href="https://citromoseper.github.io/Whiteboard-site/ar/tutorials/">
+<link rel="alternate" hreflang="zh" href="https://citromoseper.github.io/Whiteboard-site/zh/tutorials/">
+<link rel="alternate" hreflang="en" href="https://citromoseper.github.io/Whiteboard-site/tutorials/">
+<link rel="alternate" hreflang="fr" href="https://citromoseper.github.io/Whiteboard-site/fr/tutorials/">
+<link rel="alternate" hreflang="de" href="https://citromoseper.github.io/Whiteboard-site/de/tutorials/">
+<link rel="alternate" hreflang="hi" href="https://citromoseper.github.io/Whiteboard-site/hi/tutorials/">
+<link rel="alternate" hreflang="hu" href="https://citromoseper.github.io/Whiteboard-site/hu/tutorials/">
+<link rel="alternate" hreflang="it" href="https://citromoseper.github.io/Whiteboard-site/it/tutorials/">
+<link rel="alternate" hreflang="ja" href="https://citromoseper.github.io/Whiteboard-site/ja/tutorials/">
+<link rel="alternate" hreflang="pt" href="https://citromoseper.github.io/Whiteboard-site/pt/tutorials/">
+<link rel="alternate" hreflang="ru" href="https://citromoseper.github.io/Whiteboard-site/ru/tutorials/">
+<link rel="alternate" hreflang="es" href="https://citromoseper.github.io/Whiteboard-site/es/tutorials/">
+<link rel="alternate" hreflang="tr" href="https://citromoseper.github.io/Whiteboard-site/tr/tutorials/">
+<link rel="alternate" hreflang="uk" href="https://citromoseper.github.io/Whiteboard-site/uk/tutorials/">
+<link rel="alternate" hreflang="x-default" href="https://citromoseper.github.io/Whiteboard-site/tutorials/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whiteboard">
+<meta property="og:title" content="教程 – Whiteboard">
+<meta property="og:description" content="一款支持触控笔、手指和鼠标的快速白板，直接在浏览器中运行。形状自动规整，拖动颜色即可填充，白板保存在你自己的设备上。 每一步都标出了要点哪里。边看边试吧。">
+<meta property="og:url" content="https://citromoseper.github.io/Whiteboard-site/zh/tutorials/">
+<meta property="og:image" content="https://citromoseper.github.io/Whiteboard-site/img/og.png">
+<meta property="og:locale" content="zh">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../img/icon-180.png">
+<link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<script>
+  // The theme before the first paint, so nothing flashes.
+  (function () { try { var t = localStorage.getItem('site.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {} })();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://citromoseper.github.io/Whiteboard-site/zh/"}, {"@type": "ListItem", "position": 2, "name": "教程", "item": "https://citromoseper.github.io/Whiteboard-site/zh/tutorials/"}]}</script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">跳到内容</a>
+
+<header class="top">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="../../zh/">
+      <img src="../../img/icon.svg" alt="" width="34" height="34">
+      <span>Whiteboard</span>
+    </a>
+    <div class="nav-links">
+      <a class="opt" href="../../zh/features/">功能</a>
+      <a class="opt" href="../../zh/tutorials/" aria-current="page">教程</a>
+      <a class="opt" href="../../zh/support/">支持</a>
+      <a class="opt" href="https://github.com/CITROMOSEPER/Whiteboard">GitHub</a>
+      <div class="tools">
+        <div class="lang">
+          <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="语言">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+            <span id="lang-name">中文（普通话）</span>
+          </button>
+          <ul id="lang-list" hidden><li><a href="../../ar/tutorials/" hreflang="ar" lang="ar" data-lang="ar"><span>العربية</span><small>Arabic</small></a></li><li><a href="../../zh/tutorials/" hreflang="zh" lang="zh" data-lang="zh" aria-current="true"><span>中文（普通话）</span><small>Chinese (Mandarin)</small></a></li><li><a href="../../tutorials/" hreflang="en" lang="en" data-lang="en"><span>English</span><small></small></a></li><li><a href="../../fr/tutorials/" hreflang="fr" lang="fr" data-lang="fr"><span>Français</span><small>French</small></a></li><li><a href="../../de/tutorials/" hreflang="de" lang="de" data-lang="de"><span>Deutsch</span><small>German</small></a></li><li><a href="../../hi/tutorials/" hreflang="hi" lang="hi" data-lang="hi"><span>हिन्दी</span><small>Hindi</small></a></li><li><a href="../../hu/tutorials/" hreflang="hu" lang="hu" data-lang="hu"><span>Magyar</span><small>Hungarian</small></a></li><li><a href="../../it/tutorials/" hreflang="it" lang="it" data-lang="it"><span>Italiano</span><small>Italian</small></a></li><li><a href="../../ja/tutorials/" hreflang="ja" lang="ja" data-lang="ja"><span>日本語</span><small>Japanese</small></a></li><li><a href="../../pt/tutorials/" hreflang="pt" lang="pt" data-lang="pt"><span>Português</span><small>Portuguese</small></a></li><li><a href="../../ru/tutorials/" hreflang="ru" lang="ru" data-lang="ru"><span>Русский</span><small>Russian</small></a></li><li><a href="../../es/tutorials/" hreflang="es" lang="es" data-lang="es"><span>Español</span><small>Spanish</small></a></li><li><a href="../../tr/tutorials/" hreflang="tr" lang="tr" data-lang="tr"><span>Türkçe</span><small>Turkish</small></a></li><li><a href="../../uk/tutorials/" hreflang="uk" lang="uk" data-lang="uk"><span>Українська</span><small>Ukrainian</small></a></li></ul>
+        </div>
+        <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" aria-label="深色模式" title="深色模式">
+          <span class="knob">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="#ffe14d" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          </span>
+        </button>
+      </div>
+      <a class="btn-pill" href="https://citromoseper.github.io/Whiteboard/">打开应用</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="block first" id="tutorials">
+    <div class="wrap">
+      <div class="tut-head">
+        <div class="section-head">
+          <h1 class="display">几分钟就能学会</h1>
+          <p>每一步都标出了要点哪里。边看边试吧。</p>
+        </div>
+        <a href="https://github.com/CITROMOSEPER/Whiteboard#readme">完整指南</a>
+      </div>
+      <div class="tabs" role="tablist" id="tut-tabs"><button role="tab" id="tab-0" aria-selected="true" tabindex="0">入门</button><button role="tab" id="tab-1" aria-selected="false" tabindex="-1">笔和颜色</button><button role="tab" id="tab-2" aria-selected="false" tabindex="-1">荧光笔、橡皮擦、激光笔</button><button role="tab" id="tab-3" aria-selected="false" tabindex="-1">形状和颜色</button><button role="tab" id="tab-4" aria-selected="false" tabindex="-1">选择</button><button role="tab" id="tab-5" aria-selected="false" tabindex="-1">涂抹删除与撤销</button><button role="tab" id="tab-6" aria-selected="false" tabindex="-1">文字和手写</button><button role="tab" id="tab-7" aria-selected="false" tabindex="-1">图片和贴纸</button><button role="tab" id="tab-8" aria-selected="false" tabindex="-1">PDF 和纸张</button><button role="tab" id="tab-9" aria-selected="false" tabindex="-1">图库和文件</button><button role="tab" id="tab-10" aria-selected="false" tabindex="-1">导出和分享</button><button role="tab" id="tab-11" aria-selected="false" tabindex="-1">设置</button></div>
+      <div class="tutorial" role="tabpanel" id="tut-panel" aria-labelledby="tab-0">
+        <figure class="shot">
+          <img id="tut-img" src="../../img/shots/start-tools-light.webp" alt="选择工具和颜色" width="1536" height="960">
+          <button class="nav-btn prev" id="tut-prev" aria-label="上一步" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="nav-btn next" id="tut-next" aria-label="下一步"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </figure>
+        <ol class="steps" id="tut-steps"><li><button aria-current="step"><span class="num">1</span><b>选择工具和颜色</b><span class="t">底部的工具栏里有笔、荧光笔、橡皮擦、文字等，旁边是你的颜色。</span></button></li><li><button><span class="num">2</span><b>调整画笔</b><span class="t">左侧的滑块调整粗细和不透明度，下方的按钮选择线条类型。</span></button></li><li><button><span class="num">3</span><b>移动视图</b><span class="t">用两指拖动或滚动来移动，双指缩放或按 Ctrl 加滚轮来缩放。“适合内容”可以让所有内容重新显示。</span></button></li></ol>
+      </div>
+      <script type="application/json" id="tut-data">{"tutorials": [{"key": "tutStart", "name": "入门", "steps": [{"shot": "start-tools", "t": "选择工具和颜色", "p": "底部的工具栏里有笔、荧光笔、橡皮擦、文字等，旁边是你的颜色。"}, {"shot": "start-brush", "t": "调整画笔", "p": "左侧的滑块调整粗细和不透明度，下方的按钮选择线条类型。"}, {"shot": "start-move", "t": "移动视图", "p": "用两指拖动或滚动来移动，双指缩放或按 Ctrl 加滚轮来缩放。“适合内容”可以让所有内容重新显示。"}]}, {"key": "tutPen", "name": "笔和颜色", "steps": [{"shot": "pen-dash", "t": "选择线条类型", "p": "不透明度滑块下方的按钮可选择实线、点线、虚线、长虚线或点划线。"}, {"shot": "pen-mixer", "t": "调出任意颜色", "p": "彩虹色块会打开调色器，支持 HEX、RGB 和 HSL，还有可以从白板上取色的吸管。"}, {"shot": "pen-pressure", "t": "用压感绘画", "p": "在设置中打开“压感”：用触控笔按得越重，线条就越粗。"}]}, {"key": "tutHl", "name": "荧光笔、橡皮擦、激光笔", "steps": [{"shot": "hl-highlight", "t": "标记重点", "p": "荧光笔有自己的霓虹色。它会垫在字迹下方，让字迹保持清晰。"}, {"shot": "hl-eraser", "t": "擦除", "p": "橡皮擦经过的地方墨迹会被擦掉，左侧滑块调整它的大小。触控笔的橡皮擦端也能用。"}, {"shot": "hl-laser", "t": "用激光笔指示", "p": "激光笔显示一个带短拖尾的发光点，适合演示。它不会画出任何东西，拖动会移动白板。"}]}, {"key": "tutShapes", "name": "形状和颜色", "steps": [{"shot": "shapes-snap", "t": "停住即可规整", "p": "画完一笔后停住片刻：它会变成整齐的圆、直线、三角形或矩形。"}, {"shot": "shapes-fill", "t": "拖入一种颜色", "p": "从工具栏拖出一种颜色，放进闭合形状即可填充。"}, {"shot": "shapes-recolour", "t": "给线条改色", "p": "把颜色放在线条、文字或填充上即可改变颜色。虚线依然保持虚线。"}]}, {"key": "tutSelect", "name": "选择", "steps": [{"shot": "sel-lasso", "t": "选择", "p": "用选择工具点按对象，或画一个圈同时选中多个对象。"}, {"shot": "sel-handles", "t": "移动、缩放、旋转", "p": "在框内拖动可移动，拖动角或边可缩放，拖动上方的手柄可旋转。再用一根手指或按住 Shift 会对齐到 45°。"}, {"shot": "shapes-style", "t": "之后再修改", "p": "用选择工具点按一个形状，下方的工具条可以更改它的颜色、粗细和线条类型。"}, {"shot": "sel-bar", "t": "复制、保存、删除", "p": "顶部的工具条可以复制所选内容、存为贴纸或删除。"}]}, {"key": "tutUndo", "name": "涂抹删除与撤销", "steps": [{"shot": "scratch-out", "t": "涂掉它", "p": "像在纸上一样在错误上快速来回涂抹，它就会消失。底部会出现“撤销”。"}, {"shot": "undo", "t": "撤销和重做", "p": "右上角的箭头用于撤销和重做。在触摸屏上，两指轻点撤销，三指轻点重做。"}]}, {"key": "tutText", "name": "文字和手写", "steps": [{"shot": "text-type", "t": "打字", "p": "选择文字工具，在要放文字的位置点按。上方的工具条设置字体、大小和颜色。双击文字即可编辑。"}, {"shot": "text-ink", "t": "手写", "p": "在设置中打开“将手写转换为文字”，你手写的内容会变成打字的文字。"}]}, {"key": "tutPics", "name": "图片和贴纸", "steps": [{"shot": "pic-import", "t": "导入图片", "p": "“导入…”可以把图片或 PDF 的页面放到白板上。"}, {"shot": "pic-edit", "t": "缩放和旋转", "p": "导入的图片处于选中状态：可以移动它，拖动角或边缩放，用手柄旋转。"}, {"shot": "sticker", "t": "贴纸", "p": "“存为贴纸”会保存一幅图以便重复使用。工具栏中的贴纸按钮可以把它放到任何白板上。"}]}, {"key": "tutPdf", "name": "PDF 和纸张", "steps": [{"shot": "pdf-menu", "t": "打开 PDF 或新建纸张", "p": "在菜单中，“从…打开”会把 PDF 打开为可书写的页面，“新建纸张…”会新建一个固定纸张尺寸的页面。"}, {"shot": "pdf-sizes", "t": "选择纸张尺寸", "p": "A 系列和 B 系列、北美纸张、幻灯片和正方形，纵向或横向均可。"}, {"shot": "pdf-annotate", "t": "书写、标记、添加页面", "p": "直接在页面上书写和标记。页面上方或下方的 + 可以再添加一页。"}, {"shot": "pdf-pages", "t": "添加或删除页面", "p": "页面上方或下方的 + 会添加一页同样大小的页面。两端的页面为空时，旁边的垃圾桶可以删除它。"}]}, {"key": "tutFiles", "name": "图库和文件", "steps": [{"shot": "save-gallery", "t": "把白板放进图库", "p": "“保存到图库”会按文件夹保存白板并显示预览。“备份…”会把整个图库保存为一个文件。"}, {"shot": "save-file", "t": "保存为文件", "p": "“另存为…”会把 .whtbd 文件保存到你选择的位置，“从…打开”可以再次打开它。Ctrl + S 会保存到同一位置。"}, {"shot": "save-backup", "t": "备份和恢复", "p": "“备份…”会把整个图库保存为一个文件，“恢复…”可以把它找回来，“添加白板…”可以导入单个白板文件。"}]}, {"key": "tutShare", "name": "导出和分享", "steps": [{"shot": "save-export", "t": "导出", "p": "PNG、JPEG、SVG、PDF 等格式。每个导出文件都包含白板本身，可以再次打开和编辑。"}, {"shot": "export-pattern", "t": "包含图案", "p": "打开“画布图案”，即可同时导出点、横线或网格。"}, {"shot": "save-share", "t": "分享链接", "p": "“分享链接…”会把整个白板放进一个链接。它不经过任何服务器，打开的人会得到自己的副本。"}, {"shot": "open-link", "t": "打开分享的链接", "p": "在没有地址栏的已安装应用中，“打开分享链接…”可以打开别人发给你的链接。"}]}, {"key": "tutSettings", "name": "设置", "steps": [{"shot": "set-theme", "t": "浅色、深色和画布颜色", "p": "在设置中可以选择主题和白板颜色：浅色、深色、跟随主题，或你自己调的颜色。"}, {"shot": "set-pattern", "t": "点、横线或网格", "p": "画布可以是空白、点阵、像笔记本一样的横线，或网格。"}, {"shot": "set-lang", "t": "语言", "p": "应用支持 14 种语言，并跟随你的设备；也可以在这里选择其他语言。"}]}]}</script>
+    </div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <div class="who">
+      <img src="../../img/icon.svg" alt="" width="24" height="24">
+      <span>Nemes Dániel © 2026-now</span>
+    </div>
+    <nav class="links" aria-label="Footer">
+      <a href="https://citromoseper.github.io/Whiteboard/">打开应用</a>
+      <a href="../../zh/features/">功能</a>
+      <a href="../../zh/tutorials/">教程</a>
+      <a href="../../zh/support/">支持</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard">源代码</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/LICENSE">许可证</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/THIRD-PARTY-NOTICES.md">第三方声明</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../js/site.js"></script>
+</body>
+</html>

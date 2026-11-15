@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,76 +7,87 @@
 <meta name="description" content="A fast, free whiteboard for pen, touch and mouse that runs in your browser. Shapes snap clean, colours drop in to fill, PDFs to write on, and your boards stay on your device. No account, works offline.">
 <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="Whiteboard">
-<meta property="og:description" content="A fast, free whiteboard for pen, touch and mouse that runs in your browser. No account, works offline.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://citromoseper.github.io/Whiteboard-site/img/og.png">
-<meta property="og:url" content="https://citromoseper.github.io/Whiteboard-site/">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://citromoseper.github.io/Whiteboard-site/">
+<link rel="alternate" hreflang="ar" href="https://citromoseper.github.io/Whiteboard-site/ar/">
+<link rel="alternate" hreflang="zh" href="https://citromoseper.github.io/Whiteboard-site/zh/">
+<link rel="alternate" hreflang="en" href="https://citromoseper.github.io/Whiteboard-site/">
+<link rel="alternate" hreflang="fr" href="https://citromoseper.github.io/Whiteboard-site/fr/">
+<link rel="alternate" hreflang="de" href="https://citromoseper.github.io/Whiteboard-site/de/">
+<link rel="alternate" hreflang="hi" href="https://citromoseper.github.io/Whiteboard-site/hi/">
+<link rel="alternate" hreflang="hu" href="https://citromoseper.github.io/Whiteboard-site/hu/">
+<link rel="alternate" hreflang="it" href="https://citromoseper.github.io/Whiteboard-site/it/">
+<link rel="alternate" hreflang="ja" href="https://citromoseper.github.io/Whiteboard-site/ja/">
+<link rel="alternate" hreflang="pt" href="https://citromoseper.github.io/Whiteboard-site/pt/">
+<link rel="alternate" hreflang="ru" href="https://citromoseper.github.io/Whiteboard-site/ru/">
+<link rel="alternate" hreflang="es" href="https://citromoseper.github.io/Whiteboard-site/es/">
+<link rel="alternate" hreflang="tr" href="https://citromoseper.github.io/Whiteboard-site/tr/">
+<link rel="alternate" hreflang="uk" href="https://citromoseper.github.io/Whiteboard-site/uk/">
+<link rel="alternate" hreflang="x-default" href="https://citromoseper.github.io/Whiteboard-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whiteboard">
+<meta property="og:title" content="Whiteboard: a free whiteboard in your browser">
+<meta property="og:description" content="A fast, free whiteboard for pen, touch and mouse that runs in your browser. Shapes snap clean, colours drop in to fill, PDFs to write on, and your boards stay on your device. No account, works offline.">
+<meta property="og:url" content="https://citromoseper.github.io/Whiteboard-site/">
+<meta property="og:image" content="https://citromoseper.github.io/Whiteboard-site/img/og.png">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/icon-180.png">
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
 <script>
-  // Theme and language before the first paint, so nothing flashes.
-  (function () {
-    try {
-      var t = localStorage.getItem('site.theme');
-      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  })();
+  // The theme before the first paint, so nothing flashes.
+  (function () { try { var t = localStorage.getItem('site.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {} })();
 </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Whiteboard", "url": "https://citromoseper.github.io/Whiteboard-site/", "inLanguage": "en"}, {"@type": "WebApplication", "name": "Whiteboard", "url": "https://citromoseper.github.io/Whiteboard/", "applicationCategory": "DesignApplication", "operatingSystem": "Any (runs in a web browser)", "browserRequirements": "A modern web browser", "description": "A fast, free whiteboard for pen, touch and mouse that runs in your browser. Shapes snap clean, colours drop in to fill, PDFs to write on, and your boards stay on your device. No account, works offline.", "image": "https://citromoseper.github.io/Whiteboard-site/img/og.png", "inLanguage": ["ar", "zh", "en", "fr", "de", "hi", "hu", "it", "ja", "pt", "ru", "es", "tr", "uk"], "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Nemes Dániel", "url": "https://github.com/CITROMOSEPER"}, "sameAs": ["https://github.com/CITROMOSEPER/Whiteboard"], "softwareHelp": "https://citromoseper.github.io/Whiteboard-site/tutorials/"}]}</script>
 </head>
-<body>
-<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<body data-root="">
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="top">
   <nav class="wrap" aria-label="Main">
-    <a class="brand" href="#top">
+    <a class="brand" href="">
       <img src="img/icon.svg" alt="" width="34" height="34">
       <span>Whiteboard</span>
     </a>
     <div class="nav-links">
-      <a class="opt" href="#features" data-i18n="navFeatures">Features</a>
-      <a class="opt" href="#tutorials" data-i18n="navTutorials">Tutorials</a>
-      <a class="opt" href="#support" data-i18n="navSupport">Support</a>
+      <a class="opt" href="features/">Features</a>
+      <a class="opt" href="tutorials/">Tutorials</a>
+      <a class="opt" href="support/">Support</a>
       <a class="opt" href="https://github.com/CITROMOSEPER/Whiteboard">GitHub</a>
       <div class="tools">
         <div class="lang">
-          <button id="lang-btn" aria-haspopup="listbox" aria-expanded="false" data-i18n-label="language">
+          <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
             <span id="lang-name">English</span>
           </button>
-          <ul id="lang-list" role="listbox" hidden></ul>
+          <ul id="lang-list" hidden><li><a href="ar/" hreflang="ar" lang="ar" data-lang="ar"><span>العربية</span><small>Arabic</small></a></li><li><a href="zh/" hreflang="zh" lang="zh" data-lang="zh"><span>中文（普通话）</span><small>Chinese (Mandarin)</small></a></li><li><a href="" hreflang="en" lang="en" data-lang="en" aria-current="true"><span>English</span><small></small></a></li><li><a href="fr/" hreflang="fr" lang="fr" data-lang="fr"><span>Français</span><small>French</small></a></li><li><a href="de/" hreflang="de" lang="de" data-lang="de"><span>Deutsch</span><small>German</small></a></li><li><a href="hi/" hreflang="hi" lang="hi" data-lang="hi"><span>हिन्दी</span><small>Hindi</small></a></li><li><a href="hu/" hreflang="hu" lang="hu" data-lang="hu"><span>Magyar</span><small>Hungarian</small></a></li><li><a href="it/" hreflang="it" lang="it" data-lang="it"><span>Italiano</span><small>Italian</small></a></li><li><a href="ja/" hreflang="ja" lang="ja" data-lang="ja"><span>日本語</span><small>Japanese</small></a></li><li><a href="pt/" hreflang="pt" lang="pt" data-lang="pt"><span>Português</span><small>Portuguese</small></a></li><li><a href="ru/" hreflang="ru" lang="ru" data-lang="ru"><span>Русский</span><small>Russian</small></a></li><li><a href="es/" hreflang="es" lang="es" data-lang="es"><span>Español</span><small>Spanish</small></a></li><li><a href="tr/" hreflang="tr" lang="tr" data-lang="tr"><span>Türkçe</span><small>Turkish</small></a></li><li><a href="uk/" hreflang="uk" lang="uk" data-lang="uk"><span>Українська</span><small>Ukrainian</small></a></li></ul>
         </div>
-        <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" data-i18n-label="darkMode" data-i18n-title="darkMode">
+        <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" aria-label="Dark mode" title="Dark mode">
           <span class="knob">
             <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
             <svg class="moon" viewBox="0 0 24 24" fill="#ffe14d" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
           </span>
         </button>
       </div>
-      <a class="btn-pill" href="https://citromoseper.github.io/Whiteboard/" data-i18n="openApp">Open the app</a>
+      <a class="btn-pill" href="https://citromoseper.github.io/Whiteboard/">Open the app</a>
     </div>
   </nav>
 </header>
 
 <main id="main">
-  <section class="hero" id="top">
+<section class="hero" id="top">
     <div class="wrap">
       <div class="hero-text">
-        <p class="hand" data-i18n="heroHand">free, no account, works offline</p>
-        <h1 class="display"><span data-i18n="heroTitleA">Think on an</span> <mark data-i18n="heroTitleB">endless page.</mark></h1>
-        <p class="lead" data-i18n="heroLead">A fast whiteboard for pen, touch and mouse that runs right in your browser. Shapes snap clean, colours drop in to fill, and your boards stay on your device.</p>
+        <p class="hand">free, no account, works offline</p>
+        <h1 class="display"><span>Think on an</span> <mark>endless page.</mark></h1>
+        <p class="lead">A fast whiteboard for pen, touch and mouse that runs right in your browser. Shapes snap clean, colours drop in to fill, and your boards stay on your device.</p>
         <div class="ctas">
-          <a class="btn btn-primary" href="https://citromoseper.github.io/Whiteboard/"><span data-i18n="ctaStart">Start drawing</span>
-            <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="#tutorials">
+          <a class="btn btn-primary" href="https://citromoseper.github.io/Whiteboard/"><span>Start drawing</span> <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="tutorials/">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H4z"/><path d="M9 20h6M12 16v4"/><path d="M8 11l3 2 5-5" stroke="#ff3b30"/></svg>
-            <span data-i18n="ctaTour">Take the tour</span>
+            <span>Take the tour</span>
           </a>
         </div>
       </div>
@@ -92,113 +103,63 @@
             <path d="M70 290 C110 270 150 310 200 284" stroke="#1a6bff" stroke-width="6" stroke-dasharray="2 14"/>
           </svg>
           <div class="dock">
-            <i class="on" style="background: var(--ink)"></i>
-            <i style="background: #1a6bff"></i>
-            <i style="background: #ff9500"></i>
-            <i style="background: #34c759"></i>
-            <i style="background: #ff3b30"></i>
-            <i class="sep"></i>
+            <i class="on" style="background: var(--ink)"></i><i style="background: #1a6bff"></i><i style="background: #ff9500"></i>
+            <i style="background: #34c759"></i><i style="background: #ff3b30"></i><i class="sep"></i>
             <i style="background: conic-gradient(#ff3b30, #ff9500, #ffe14d, #34c759, #1a6bff, #af52de, #ff3b30)"></i>
           </div>
         </div>
-        <p class="note hand" data-i18n="heroNote">hold still and it snaps</p>
+        <p class="note hand">hold still and it snaps</p>
       </div>
     </div>
   </section>
 
-  <section class="strip" aria-label="At a glance">
+  <section class="strip" aria-label="Whiteboard">
     <div class="wrap">
-      <span data-i18n="fact1">Computers, tablets and phones</span>
-      <span data-i18n="fact2">14 languages</span>
-      <span data-i18n="fact3">Works offline</span>
-      <span data-i18n="fact4">Installable as an app</span>
-      <span data-i18n="fact5">Open source</span>
+      <span>Computers, tablets and phones</span><span>14 languages</span><span>Works offline</span><span>Installable as an app</span><span>Open source</span>
     </div>
   </section>
 
-  <section id="features">
+  <section class="block">
     <div class="wrap">
       <div class="section-head">
-        <h2 class="display" data-i18n="featTitle">Feels like paper. Tidies up like software.</h2>
-        <p data-i18n="featLead">The best ideas from drawing apps, in a calm glass interface that gets out of your way.</p>
+        <h2 class="display">Feels like paper. Tidies up like software.</h2>
+        <p>The best ideas from drawing apps, in a calm glass interface that gets out of your way.</p>
       </div>
-      <div class="cards">
-        <article class="card">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="faint" d="M8 30c4-12 8-18 14-14s4 12 12 4" stroke-width="3" stroke-dasharray="1 6"/><circle cx="26" cy="24" r="14" stroke="#1a6bff" stroke-width="3.5"/></svg>
-          <h3 class="display" data-i18n="f1t">Shapes that snap</h3>
-          <p data-i18n="f1p">Hold still at the end of a stroke and it becomes a clean line, circle, triangle or rectangle. Keep holding to turn and resize it.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="26" height="26" rx="4" fill="#ff9500" fill-opacity="0.22" stroke="#ff9500" stroke-width="3.5"/><circle cx="38" cy="10" r="6" fill="#ff9500"/><path class="ink" d="M34 15l-8 9" stroke-width="3"/></svg>
-          <h3 class="display" data-i18n="f2t">Drag a colour to fill</h3>
-          <p data-i18n="f2p">Pull a colour out of the dock and drop it inside any closed shape. Drop it on a line or a text to recolour it.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ink" d="M8 34l6-20 6 20 6-20 6 20 6-20" stroke-width="3.5"/></svg>
-          <h3 class="display" data-i18n="f3t">Scratch out to delete</h3>
-          <p data-i18n="f3p">Scribble back and forth over a mistake, like on paper, and it disappears. Undo is right there if you change your mind.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30h36" stroke="#ffe14d" stroke-width="12" stroke-linecap="butt"/><path class="ink" d="M10 32c3-10 6-14 8-10s2 8 6 2 6-8 8-2" stroke-width="3.5"/></svg>
-          <h3 class="display" data-i18n="f4t">Highlighter and laser</h3>
-          <p data-i18n="f4p">The highlighter slides under your writing so it stays crisp. The laser pointer leaves a glowing trail for presenting.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="ink" x="10" y="6" width="28" height="36" rx="4" stroke-width="3.5"/><path d="M17 17h14M17 24h14M17 31h8" stroke="#1a6bff" stroke-width="3.5"/></svg>
-          <h3 class="display" data-i18n="f5t">PDFs and sheets</h3>
-          <p data-i18n="f5p">Open a PDF or start a page of a set paper size, and write straight on top of it. Great for lecture slides and homework.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ink" d="M8 36c4-8 8-22 12-22s2 14 6 14 4-10 8-10" stroke-width="3.5"/><path d="M30 38h12" stroke="#1a6bff" stroke-width="3.5"/></svg>
-          <h3 class="display" data-i18n="f6t">Text and handwriting</h3>
-          <p data-i18n="f6p">Type where you need it, or write by hand and let it turn into text. Pressure sensitivity works with Apple Pencil and most Windows pens.</p>
-        </article>
-      </div>
+      <div class="cards"><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="faint" d="M8 30c4-12 8-18 14-14s4 12 12 4" stroke-width="3" stroke-dasharray="1 6"/><circle cx="26" cy="24" r="14" stroke="#1a6bff" stroke-width="3.5"/></svg><h3 class="display">Shapes that snap</h3><p>Hold still at the end of a stroke and it becomes a clean line, circle, triangle or rectangle. Keep holding to turn and resize it.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="26" height="26" rx="4" fill="#ff9500" fill-opacity="0.22" stroke="#ff9500" stroke-width="3.5"/><circle cx="38" cy="10" r="6" fill="#ff9500"/><path class="ink" d="M34 15l-8 9" stroke-width="3"/></svg><h3 class="display">Drag a colour to fill</h3><p>Pull a colour out of the dock and drop it inside any closed shape. Drop it on a line or a text to recolour it.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ink" d="M8 34l6-20 6 20 6-20 6 20 6-20" stroke-width="3.5"/></svg><h3 class="display">Scratch out to delete</h3><p>Scribble back and forth over a mistake, like on paper, and it disappears. Undo is right there if you change your mind.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30h36" stroke="#ffe14d" stroke-width="12" stroke-linecap="butt"/><path class="ink" d="M10 32c3-10 6-14 8-10s2 8 6 2 6-8 8-2" stroke-width="3.5"/></svg><h3 class="display">Highlighter and laser</h3><p>The highlighter slides under your writing so it stays crisp. The laser pointer leaves a glowing trail for presenting.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="ink" x="10" y="6" width="28" height="36" rx="4" stroke-width="3.5"/><path d="M17 17h14M17 24h14M17 31h8" stroke="#1a6bff" stroke-width="3.5"/></svg><h3 class="display">PDFs and sheets</h3><p>Open a PDF or start a page of a set paper size, and write straight on top of it. Great for lecture slides and homework.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ink" d="M8 36c4-8 8-22 12-22s2 14 6 14 4-10 8-10" stroke-width="3.5"/><path d="M30 38h12" stroke="#1a6bff" stroke-width="3.5"/></svg><h3 class="display">Text and handwriting</h3><p>Type where you need it, or write by hand and let it turn into text. Pressure sensitivity works with Apple Pencil and most Windows pens.</p></article></div>
+      <a class="more" href="features/">See everything it can do <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
-  <section id="tutorials">
+  <section class="block">
     <div class="wrap">
-      <div class="tut-head">
-        <div class="section-head">
-          <h2 class="display" data-i18n="tutTitle">Learn it in a few minutes</h2>
-          <p data-i18n="tutLead">Each step shows where to tap. Try it yourself as you go.</p>
-        </div>
-        <a href="https://github.com/CITROMOSEPER/Whiteboard#readme" data-i18n="tutGuide">The full guide</a>
+      <div class="section-head">
+        <h2 class="display">Learn it in a few minutes</h2>
+        <p>Each step shows where to tap. Try it yourself as you go.</p>
       </div>
-      <div class="tabs" role="tablist" id="tut-tabs"></div>
-      <div class="tutorial" role="tabpanel" id="tut-panel">
-        <figure class="shot">
-          <img id="tut-img" alt="" width="1536" height="960">
-          <button class="nav-btn prev" id="tut-prev" data-i18n-label="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-          <button class="nav-btn next" id="tut-next" data-i18n-label="next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-        </figure>
-        <ol class="steps" id="tut-steps"></ol>
-      </div>
+      <div class="teasers"><a class="teaser" href="tutorials/#tutStart"><img data-shot="start-tools" src="img/shots/start-tools-light.webp" alt="" width="1536" height="960" loading="lazy"><span>Getting started</span></a><a class="teaser" href="tutorials/#tutPen"><img data-shot="pen-dash" src="img/shots/pen-dash-light.webp" alt="" width="1536" height="960" loading="lazy"><span>Pen and colours</span></a><a class="teaser" href="tutorials/#tutHl"><img data-shot="hl-highlight" src="img/shots/hl-highlight-light.webp" alt="" width="1536" height="960" loading="lazy"><span>Highlighter, eraser, laser</span></a></div>
+      <a class="more" href="tutorials/">Open the tutorials <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
-  <section id="support">
-    <div class="wrap">
-      <div class="support">
+  <section class="block last">
+    <div class="wrap"><div class="support">
         <div class="text">
-          <p class="hand" data-i18n="supHand">thank you!</p>
-          <h2 class="display" data-i18n="supTitle">Whiteboard is free, and always will be.</h2>
-          <p class="lead" data-i18n="supLead">It's built by a student in Budapest in spare time. If it helps you, a small tip keeps new features coming.</p>
+          <p class="hand">thank you!</p>
+          <h2 class="display">Whiteboard is free, and always will be.</h2>
+          <p class="lead">It’s built by a student in Budapest in spare time. If it helps you, a small tip keeps new features coming.</p>
         </div>
         <div class="actions">
           <span class="soon" aria-disabled="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v2M12 3v2"/></svg>
-            <span data-i18n="supCoffee">Buy me a coffee</span> <small data-i18n="supSoon">(coming soon)</small>
+            <span>Buy me a coffee</span> <small>(coming soon)</small>
           </span>
           <a class="sponsor" href="https://github.com/sponsors/CITROMOSEPER">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
-            <span data-i18n="supSponsor">Sponsor on GitHub</span>
+            <span>Sponsor on GitHub</span>
           </a>
-          <a class="star" href="https://github.com/CITROMOSEPER/Whiteboard" data-i18n="supStar">Or give it a star on GitHub</a>
+          <a class="star" href="https://github.com/CITROMOSEPER/Whiteboard">Or give it a star on GitHub</a>
         </div>
-      </div>
-    </div>
+      </div></div>
   </section>
 </main>
 
@@ -209,16 +170,17 @@
       <span>Nemes Dániel © 2026-now</span>
     </div>
     <nav class="links" aria-label="Footer">
-      <a href="https://citromoseper.github.io/Whiteboard/" data-i18n="openApp">Open the app</a>
-      <a href="https://github.com/CITROMOSEPER/Whiteboard" data-i18n="footSource">Source code</a>
-      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/LICENSE" data-i18n="footLicense">License</a>
-      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/THIRD-PARTY-NOTICES.md" data-i18n="footNotices">Third-party notices</a>
+      <a href="https://citromoseper.github.io/Whiteboard/">Open the app</a>
+      <a href="features/">Features</a>
+      <a href="tutorials/">Tutorials</a>
+      <a href="support/">Support</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard">Source code</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/LICENSE">License</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/THIRD-PARTY-NOTICES.md">Third-party notices</a>
     </nav>
   </div>
 </footer>
 
-<script src="js/i18n.js"></script>
-<script src="js/i18n-tutorials.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Whiteboard: um quadro branco gratuito no seu navegador</title>
+<meta name="description" content="Um quadro branco rápido e gratuito para caneta, toque e rato, no seu navegador. As formas ficam direitas, as cores preenchem ao arrastar, PDF para anotar, e os seus quadros ficam no seu dispositivo. Sem conta, também offline.">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://citromoseper.github.io/Whiteboard-site/pt/">
+<link rel="alternate" hreflang="ar" href="https://citromoseper.github.io/Whiteboard-site/ar/">
+<link rel="alternate" hreflang="zh" href="https://citromoseper.github.io/Whiteboard-site/zh/">
+<link rel="alternate" hreflang="en" href="https://citromoseper.github.io/Whiteboard-site/">
+<link rel="alternate" hreflang="fr" href="https://citromoseper.github.io/Whiteboard-site/fr/">
+<link rel="alternate" hreflang="de" href="https://citromoseper.github.io/Whiteboard-site/de/">
+<link rel="alternate" hreflang="hi" href="https://citromoseper.github.io/Whiteboard-site/hi/">
+<link rel="alternate" hreflang="hu" href="https://citromoseper.github.io/Whiteboard-site/hu/">
+<link rel="alternate" hreflang="it" href="https://citromoseper.github.io/Whiteboard-site/it/">
+<link rel="alternate" hreflang="ja" href="https://citromoseper.github.io/Whiteboard-site/ja/">
+<link rel="alternate" hreflang="pt" href="https://citromoseper.github.io/Whiteboard-site/pt/">
+<link rel="alternate" hreflang="ru" href="https://citromoseper.github.io/Whiteboard-site/ru/">
+<link rel="alternate" hreflang="es" href="https://citromoseper.github.io/Whiteboard-site/es/">
+<link rel="alternate" hreflang="tr" href="https://citromoseper.github.io/Whiteboard-site/tr/">
+<link rel="alternate" hreflang="uk" href="https://citromoseper.github.io/Whiteboard-site/uk/">
+<link rel="alternate" hreflang="x-default" href="https://citromoseper.github.io/Whiteboard-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whiteboard">
+<meta property="og:title" content="Whiteboard: um quadro branco gratuito no seu navegador">
+<meta property="og:description" content="Um quadro branco rápido e gratuito para caneta, toque e rato, no seu navegador. As formas ficam direitas, as cores preenchem ao arrastar, PDF para anotar, e os seus quadros ficam no seu dispositivo. Sem conta, também offline.">
+<meta property="og:url" content="https://citromoseper.github.io/Whiteboard-site/pt/">
+<meta property="og:image" content="https://citromoseper.github.io/Whiteboard-site/img/og.png">
+<meta property="og:locale" content="pt">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+<script>
+  // The theme before the first paint, so nothing flashes.
+  (function () { try { var t = localStorage.getItem('site.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {} })();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Whiteboard", "url": "https://citromoseper.github.io/Whiteboard-site/pt/", "inLanguage": "pt"}, {"@type": "WebApplication", "name": "Whiteboard", "url": "https://citromoseper.github.io/Whiteboard/", "applicationCategory": "DesignApplication", "operatingSystem": "Any (runs in a web browser)", "browserRequirements": "A modern web browser", "description": "Um quadro branco rápido e gratuito para caneta, toque e rato, no seu navegador. As formas ficam direitas, as cores preenchem ao arrastar, PDF para anotar, e os seus quadros ficam no seu dispositivo. Sem conta, também offline.", "image": "https://citromoseper.github.io/Whiteboard-site/img/og.png", "inLanguage": ["ar", "zh", "en", "fr", "de", "hi", "hu", "it", "ja", "pt", "ru", "es", "tr", "uk"], "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Nemes Dániel", "url": "https://github.com/CITROMOSEPER"}, "sameAs": ["https://github.com/CITROMOSEPER/Whiteboard"], "softwareHelp": "https://citromoseper.github.io/Whiteboard-site/pt/tutorials/"}]}</script>
+</head>
+<body data-root="../">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+
+<header class="top">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="../pt/">
+      <img src="../img/icon.svg" alt="" width="34" height="34">
+      <span>Whiteboard</span>
+    </a>
+    <div class="nav-links">
+      <a class="opt" href="../pt/features/">Funcionalidades</a>
+      <a class="opt" href="../pt/tutorials/">Tutoriais</a>
+      <a class="opt" href="../pt/support/">Apoiar</a>
+      <a class="opt" href="https://github.com/CITROMOSEPER/Whiteboard">GitHub</a>
+      <div class="tools">
+        <div class="lang">
+          <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Idioma">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+            <span id="lang-name">Português</span>
+          </button>
+          <ul id="lang-list" hidden><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar"><span>العربية</span><small>Arabic</small></a></li><li><a href="../zh/" hreflang="zh" lang="zh" data-lang="zh"><span>中文（普通话）</span><small>Chinese (Mandarin)</small></a></li><li><a href="../" hreflang="en" lang="en" data-lang="en"><span>English</span><small></small></a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr"><span>Français</span><small>French</small></a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de"><span>Deutsch</span><small>German</small></a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi"><span>हिन्दी</span><small>Hindi</small></a></li><li><a href="../hu/" hreflang="hu" lang="hu" data-lang="hu"><span>Magyar</span><small>Hungarian</small></a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it"><span>Italiano</span><small>Italian</small></a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja"><span>日本語</span><small>Japanese</small></a></li><li><a href="../pt/" hreflang="pt" lang="pt" data-lang="pt" aria-current="true"><span>Português</span><small>Portuguese</small></a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru"><span>Русский</span><small>Russian</small></a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es"><span>Español</span><small>Spanish</small></a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr"><span>Türkçe</span><small>Turkish</small></a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk"><span>Українська</span><small>Ukrainian</small></a></li></ul>
+        </div>
+        <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" aria-label="Modo escuro" title="Modo escuro">
+          <span class="knob">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="#ffe14d" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          </span>
+        </button>
+      </div>
+      <a class="btn-pill" href="https://citromoseper.github.io/Whiteboard/">Abrir a app</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="hand">grátis, sem conta, também offline</p>
+        <h1 class="display"><span>Pense numa</span> <mark>página sem fim.</mark></h1>
+        <p class="lead">Um quadro branco rápido para caneta, toque e rato que funciona diretamente no seu navegador. As formas ficam direitas, as cores preenchem ao arrastar, e os seus quadros ficam no seu dispositivo.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://citromoseper.github.io/Whiteboard/"><span>Começar a desenhar</span> <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="../pt/tutorials/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H4z"/><path d="M9 20h6M12 16v4"/><path d="M8 11l3 2 5-5" stroke="#ff3b30"/></svg>
+            <span>Fazer a visita</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="board-card">
+          <svg class="art" viewBox="0 0 480 360" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 210 L196 196" stroke="#ffe14d" stroke-opacity="0.85" stroke-width="22" stroke-linecap="butt"/>
+            <path class="ink" d="M62 150 C70 196 80 222 92 222 C106 222 112 176 124 176 C136 176 142 222 156 222 C168 222 178 196 186 150" stroke-width="7"/>
+            <circle cx="186" cy="150" r="7" fill="#ff9500"/>
+            <circle cx="340" cy="120" r="58" fill="#1a6bff" fill-opacity="0.16" stroke="#1a6bff" stroke-width="6"/>
+            <rect x="262" y="210" width="124" height="80" rx="4" fill="#ff9500" fill-opacity="0.18" stroke="#ff9500" stroke-width="6"/>
+            <path class="ink" d="M402 236 L444 300 L360 300 Z" stroke-width="6"/>
+            <path d="M70 290 C110 270 150 310 200 284" stroke="#1a6bff" stroke-width="6" stroke-dasharray="2 14"/>
+          </svg>
+          <div class="dock">
+            <i class="on" style="background: var(--ink)"></i><i style="background: #1a6bff"></i><i style="background: #ff9500"></i>
+            <i style="background: #34c759"></i><i style="background: #ff3b30"></i><i class="sep"></i>
+            <i style="background: conic-gradient(#ff3b30, #ff9500, #ffe14d, #34c759, #1a6bff, #af52de, #ff3b30)"></i>
+          </div>
+        </div>
+        <p class="note hand">fique parado e endireita</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Whiteboard">
+    <div class="wrap">
+      <span>Computadores, tablets e telemóveis</span><span>14 idiomas</span><span>Funciona offline</span><span>Instalável como app</span><span>Código aberto</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display">Parece papel. Arruma-se como software.</h2>
+        <p>As melhores ideias das apps de desenho, numa interface de vidro calma que não atrapalha.</p>
+      </div>
+      <div class="cards"><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="faint" d="M8 30c4-12 8-18 14-14s4 12 12 4" stroke-width="3" stroke-dasharray="1 6"/><circle cx="26" cy="24" r="14" stroke="#1a6bff" stroke-width="3.5"/></svg><h3 class="display">Formas que endireitam</h3><p>Fique parado no fim de um traço e ele torna-se uma linha, um círculo, um triângulo ou um retângulo limpo. Continue a segurar para rodar e redimensionar.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="26" height="26" rx="4" fill="#ff9500" fill-opacity="0.22" stroke="#ff9500" stroke-width="3.5"/><circle cx="38" cy="10" r="6" fill="#ff9500"/><path class="ink" d="M34 15l-8 9" stroke-width="3"/></svg><h3 class="display">Arraste uma cor para preencher</h3><p>Tire uma cor da barra e largue-a dentro de qualquer forma fechada. Numa linha ou num texto, muda-lhe a cor.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ink" d="M8 34l6-20 6 20 6-20 6 20 6-20" stroke-width="3.5"/></svg><h3 class="display">Rabiscar para apagar</h3><p>Rabisque para trás e para a frente sobre um erro, como no papel, e ele desaparece. Desfazer está logo ali se mudar de ideias.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30h36" stroke="#ffe14d" stroke-width="12" stroke-linecap="butt"/><path class="ink" d="M10 32c3-10 6-14 8-10s2 8 6 2 6-8 8-2" stroke-width="3.5"/></svg><h3 class="display">Marca-texto e laser</h3><p>O marca-texto desliza por baixo da escrita, que fica nítida. O ponteiro laser deixa um rasto brilhante para apresentar.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="ink" x="10" y="6" width="28" height="36" rx="4" stroke-width="3.5"/><path d="M17 17h14M17 24h14M17 31h8" stroke="#1a6bff" stroke-width="3.5"/></svg><h3 class="display">PDF e folhas</h3><p>Abra um PDF ou comece uma página de um tamanho de papel fixo e escreva por cima. Ótimo para diapositivos de aulas e trabalhos de casa.</p></article><article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ink" d="M8 36c4-8 8-22 12-22s2 14 6 14 4-10 8-10" stroke-width="3.5"/><path d="M30 38h12" stroke="#1a6bff" stroke-width="3.5"/></svg><h3 class="display">Texto e escrita à mão</h3><p>Escreva no teclado onde precisar, ou à mão e transforme-o em texto. A sensibilidade à pressão funciona com o Apple Pencil e a maioria das canetas Windows.</p></article></div>
+      <a class="more" href="../pt/features/">Ver tudo o que sabe fazer <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display">Aprende-se em poucos minutos</h2>
+        <p>Cada passo mostra onde tocar. Experimente enquanto lê.</p>
+      </div>
+      <div class="teasers"><a class="teaser" href="../pt/tutorials/#tutStart"><img data-shot="start-tools" src="../img/shots/start-tools-light.webp" alt="" width="1536" height="960" loading="lazy"><span>Primeiros passos</span></a><a class="teaser" href="../pt/tutorials/#tutPen"><img data-shot="pen-dash" src="../img/shots/pen-dash-light.webp" alt="" width="1536" height="960" loading="lazy"><span>Caneta e cores</span></a><a class="teaser" href="../pt/tutorials/#tutHl"><img data-shot="hl-highlight" src="../img/shots/hl-highlight-light.webp" alt="" width="1536" height="960" loading="lazy"><span>Marca-texto, borracha, laser</span></a></div>
+      <a class="more" href="../pt/tutorials/">Abrir os tutoriais <svg class="fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <section class="block last">
+    <div class="wrap"><div class="support">
+        <div class="text">
+          <p class="hand">obrigado!</p>
+          <h2 class="display">O Whiteboard é grátis, e sempre será.</h2>
+          <p class="lead">É feito por um estudante em Budapeste nos tempos livres. Se o ajuda, uma pequena gorjeta mantém as novidades a chegar.</p>
+        </div>
+        <div class="actions">
+          <span class="soon" aria-disabled="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v2M12 3v2"/></svg>
+            <span>Pague-me um café</span> <small>(em breve)</small>
+          </span>
+          <a class="sponsor" href="https://github.com/sponsors/CITROMOSEPER">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+            <span>Patrocinar no GitHub</span>
+          </a>
+          <a class="star" href="https://github.com/CITROMOSEPER/Whiteboard">Ou dê-lhe uma estrela no GitHub</a>
+        </div>
+      </div></div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <div class="who">
+      <img src="../img/icon.svg" alt="" width="24" height="24">
+      <span>Nemes Dániel © 2026-now</span>
+    </div>
+    <nav class="links" aria-label="Footer">
+      <a href="https://citromoseper.github.io/Whiteboard/">Abrir a app</a>
+      <a href="../pt/features/">Funcionalidades</a>
+      <a href="../pt/tutorials/">Tutoriais</a>
+      <a href="../pt/support/">Apoiar</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard">Código-fonte</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/LICENSE">Licença</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/THIRD-PARTY-NOTICES.md">Avisos de terceiros</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

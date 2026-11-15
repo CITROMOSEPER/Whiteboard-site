@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tutoriels – Whiteboard</title>
+<meta name="description" content="Un tableau blanc rapide pour stylet, doigt et souris, directement dans votre navigateur. Les formes se redressent, les couleurs remplissent par glisser-déposer, et vos tableaux restent sur votre appareil. Chaque étape montre où toucher. Essayez en même temps.">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://citromoseper.github.io/Whiteboard-site/fr/tutorials/">
+<link rel="alternate" hreflang="ar" href="https://citromoseper.github.io/Whiteboard-site/ar/tutorials/">
+<link rel="alternate" hreflang="zh" href="https://citromoseper.github.io/Whiteboard-site/zh/tutorials/">
+<link rel="alternate" hreflang="en" href="https://citromoseper.github.io/Whiteboard-site/tutorials/">
+<link rel="alternate" hreflang="fr" href="https://citromoseper.github.io/Whiteboard-site/fr/tutorials/">
+<link rel="alternate" hreflang="de" href="https://citromoseper.github.io/Whiteboard-site/de/tutorials/">
+<link rel="alternate" hreflang="hi" href="https://citromoseper.github.io/Whiteboard-site/hi/tutorials/">
+<link rel="alternate" hreflang="hu" href="https://citromoseper.github.io/Whiteboard-site/hu/tutorials/">
+<link rel="alternate" hreflang="it" href="https://citromoseper.github.io/Whiteboard-site/it/tutorials/">
+<link rel="alternate" hreflang="ja" href="https://citromoseper.github.io/Whiteboard-site/ja/tutorials/">
+<link rel="alternate" hreflang="pt" href="https://citromoseper.github.io/Whiteboard-site/pt/tutorials/">
+<link rel="alternate" hreflang="ru" href="https://citromoseper.github.io/Whiteboard-site/ru/tutorials/">
+<link rel="alternate" hreflang="es" href="https://citromoseper.github.io/Whiteboard-site/es/tutorials/">
+<link rel="alternate" hreflang="tr" href="https://citromoseper.github.io/Whiteboard-site/tr/tutorials/">
+<link rel="alternate" hreflang="uk" href="https://citromoseper.github.io/Whiteboard-site/uk/tutorials/">
+<link rel="alternate" hreflang="x-default" href="https://citromoseper.github.io/Whiteboard-site/tutorials/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whiteboard">
+<meta property="og:title" content="Tutoriels – Whiteboard">
+<meta property="og:description" content="Un tableau blanc rapide pour stylet, doigt et souris, directement dans votre navigateur. Les formes se redressent, les couleurs remplissent par glisser-déposer, et vos tableaux restent sur votre appareil. Chaque étape montre où toucher. Essayez en même temps.">
+<meta property="og:url" content="https://citromoseper.github.io/Whiteboard-site/fr/tutorials/">
+<meta property="og:image" content="https://citromoseper.github.io/Whiteboard-site/img/og.png">
+<meta property="og:locale" content="fr">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../img/icon-180.png">
+<link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<script>
+  // The theme before the first paint, so nothing flashes.
+  (function () { try { var t = localStorage.getItem('site.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {} })();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://citromoseper.github.io/Whiteboard-site/fr/"}, {"@type": "ListItem", "position": 2, "name": "Tutoriels", "item": "https://citromoseper.github.io/Whiteboard-site/fr/tutorials/"}]}</script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="../../fr/">
+      <img src="../../img/icon.svg" alt="" width="34" height="34">
+      <span>Whiteboard</span>
+    </a>
+    <div class="nav-links">
+      <a class="opt" href="../../fr/features/">Fonctions</a>
+      <a class="opt" href="../../fr/tutorials/" aria-current="page">Tutoriels</a>
+      <a class="opt" href="../../fr/support/">Soutenir</a>
+      <a class="opt" href="https://github.com/CITROMOSEPER/Whiteboard">GitHub</a>
+      <div class="tools">
+        <div class="lang">
+          <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Langue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+            <span id="lang-name">Français</span>
+          </button>
+          <ul id="lang-list" hidden><li><a href="../../ar/tutorials/" hreflang="ar" lang="ar" data-lang="ar"><span>العربية</span><small>Arabic</small></a></li><li><a href="../../zh/tutorials/" hreflang="zh" lang="zh" data-lang="zh"><span>中文（普通话）</span><small>Chinese (Mandarin)</small></a></li><li><a href="../../tutorials/" hreflang="en" lang="en" data-lang="en"><span>English</span><small></small></a></li><li><a href="../../fr/tutorials/" hreflang="fr" lang="fr" data-lang="fr" aria-current="true"><span>Français</span><small>French</small></a></li><li><a href="../../de/tutorials/" hreflang="de" lang="de" data-lang="de"><span>Deutsch</span><small>German</small></a></li><li><a href="../../hi/tutorials/" hreflang="hi" lang="hi" data-lang="hi"><span>हिन्दी</span><small>Hindi</small></a></li><li><a href="../../hu/tutorials/" hreflang="hu" lang="hu" data-lang="hu"><span>Magyar</span><small>Hungarian</small></a></li><li><a href="../../it/tutorials/" hreflang="it" lang="it" data-lang="it"><span>Italiano</span><small>Italian</small></a></li><li><a href="../../ja/tutorials/" hreflang="ja" lang="ja" data-lang="ja"><span>日本語</span><small>Japanese</small></a></li><li><a href="../../pt/tutorials/" hreflang="pt" lang="pt" data-lang="pt"><span>Português</span><small>Portuguese</small></a></li><li><a href="../../ru/tutorials/" hreflang="ru" lang="ru" data-lang="ru"><span>Русский</span><small>Russian</small></a></li><li><a href="../../es/tutorials/" hreflang="es" lang="es" data-lang="es"><span>Español</span><small>Spanish</small></a></li><li><a href="../../tr/tutorials/" hreflang="tr" lang="tr" data-lang="tr"><span>Türkçe</span><small>Turkish</small></a></li><li><a href="../../uk/tutorials/" hreflang="uk" lang="uk" data-lang="uk"><span>Українська</span><small>Ukrainian</small></a></li></ul>
+        </div>
+        <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" aria-label="Mode sombre" title="Mode sombre">
+          <span class="knob">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="#ffe14d" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          </span>
+        </button>
+      </div>
+      <a class="btn-pill" href="https://citromoseper.github.io/Whiteboard/">Ouvrir l’app</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="block first" id="tutorials">
+    <div class="wrap">
+      <div class="tut-head">
+        <div class="section-head">
+          <h1 class="display">Pris en main en quelques minutes</h1>
+          <p>Chaque étape montre où toucher. Essayez en même temps.</p>
+        </div>
+        <a href="https://github.com/CITROMOSEPER/Whiteboard#readme">Le guide complet</a>
+      </div>
+      <div class="tabs" role="tablist" id="tut-tabs"><button role="tab" id="tab-0" aria-selected="true" tabindex="0">Premiers pas</button><button role="tab" id="tab-1" aria-selected="false" tabindex="-1">Stylo et couleurs</button><button role="tab" id="tab-2" aria-selected="false" tabindex="-1">Surligneur, gomme, laser</button><button role="tab" id="tab-3" aria-selected="false" tabindex="-1">Formes et couleurs</button><button role="tab" id="tab-4" aria-selected="false" tabindex="-1">Sélectionner</button><button role="tab" id="tab-5" aria-selected="false" tabindex="-1">Gribouiller et annuler</button><button role="tab" id="tab-6" aria-selected="false" tabindex="-1">Texte et écriture</button><button role="tab" id="tab-7" aria-selected="false" tabindex="-1">Images et autocollants</button><button role="tab" id="tab-8" aria-selected="false" tabindex="-1">PDF et feuilles</button><button role="tab" id="tab-9" aria-selected="false" tabindex="-1">Galerie et fichiers</button><button role="tab" id="tab-10" aria-selected="false" tabindex="-1">Exporter et partager</button><button role="tab" id="tab-11" aria-selected="false" tabindex="-1">Réglages</button></div>
+      <div class="tutorial" role="tabpanel" id="tut-panel" aria-labelledby="tab-0">
+        <figure class="shot">
+          <img id="tut-img" src="../../img/shots/start-tools-light.webp" alt="Choisissez un outil et une couleur" width="1536" height="960">
+          <button class="nav-btn prev" id="tut-prev" aria-label="Étape précédente" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="nav-btn next" id="tut-next" aria-label="Étape suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </figure>
+        <ol class="steps" id="tut-steps"><li><button aria-current="step"><span class="num">1</span><b>Choisissez un outil et une couleur</b><span class="t">Le dock en bas contient le stylo, le surligneur, la gomme, le texte et plus, avec vos couleurs à côté.</span></button></li><li><button><span class="num">2</span><b>Réglez le pinceau</b><span class="t">Les curseurs à gauche règlent l’épaisseur et l’opacité. Le bouton en dessous choisit le type de trait.</span></button></li><li><button><span class="num">3</span><b>Déplacez-vous</b><span class="t">Glissez à deux doigts ou faites défiler pour vous déplacer, pincez ou Ctrl + molette pour zoomer. « Ajuster au contenu » remet tout en vue.</span></button></li></ol>
+      </div>
+      <script type="application/json" id="tut-data">{"tutorials": [{"key": "tutStart", "name": "Premiers pas", "steps": [{"shot": "start-tools", "t": "Choisissez un outil et une couleur", "p": "Le dock en bas contient le stylo, le surligneur, la gomme, le texte et plus, avec vos couleurs à côté."}, {"shot": "start-brush", "t": "Réglez le pinceau", "p": "Les curseurs à gauche règlent l’épaisseur et l’opacité. Le bouton en dessous choisit le type de trait."}, {"shot": "start-move", "t": "Déplacez-vous", "p": "Glissez à deux doigts ou faites défiler pour vous déplacer, pincez ou Ctrl + molette pour zoomer. « Ajuster au contenu » remet tout en vue."}]}, {"key": "tutPen", "name": "Stylo et couleurs", "steps": [{"shot": "pen-dash", "t": "Choisir un type de trait", "p": "Le bouton sous le curseur d’opacité choisit plein, pointillé, tirets, tirets longs ou tiret-point."}, {"shot": "pen-mixer", "t": "Mélanger n’importe quelle couleur", "p": "La pastille arc-en-ciel ouvre le mélangeur de couleurs, avec HEX, RVB et TSL, et une pipette qui prend une couleur sur le tableau."}, {"shot": "pen-pressure", "t": "Dessiner avec la pression", "p": "Activez « Sensibilité à la pression » dans les Réglages : appuyez plus fort avec un stylet et le trait s’épaissit."}]}, {"key": "tutHl", "name": "Surligneur, gomme, laser", "steps": [{"shot": "hl-highlight", "t": "Surligner", "p": "Le surligneur a ses propres couleurs fluo. Il passe sous l’écriture, qui reste nette."}, {"shot": "hl-eraser", "t": "Gommer", "p": "La gomme efface l’encre là où elle passe ; le curseur à gauche règle sa taille. Le bout gomme d’un stylet marche aussi."}, {"shot": "hl-laser", "t": "Pointer avec le laser", "p": "Le pointeur laser affiche un point lumineux avec une courte traînée, pour présenter. Il ne dessine jamais, et glisser déplace le tableau."}]}, {"key": "tutShapes", "name": "Formes et couleurs", "steps": [{"shot": "shapes-snap", "t": "Restez immobile pour redresser", "p": "Terminez un trait et restez immobile un instant : il devient un cercle, une ligne, un triangle ou un rectangle net."}, {"shot": "shapes-fill", "t": "Glissez une couleur", "p": "Tirez une couleur du dock et déposez-la dans une forme fermée pour la remplir."}, {"shot": "shapes-recolour", "t": "Recolorer une ligne", "p": "Déposez une couleur sur une ligne, un texte ou un remplissage pour changer sa couleur. Une ligne en tirets reste en tirets."}]}, {"key": "tutSelect", "name": "Sélectionner", "steps": [{"shot": "sel-lasso", "t": "Sélectionner", "p": "Avec l’outil de sélection, touchez un élément, ou tracez une boucle autour de plusieurs à la fois."}, {"shot": "sel-handles", "t": "Déplacer, redimensionner, tourner", "p": "Glissez dans le cadre pour déplacer, un coin ou un côté pour redimensionner, la poignée au-dessus pour tourner. Un autre doigt, ou Maj, aligne sur 45°."}, {"shot": "shapes-style", "t": "Modifiez-le plus tard", "p": "Avec l’outil de sélection, touchez une forme. La barre en dessous change sa couleur, son épaisseur et son type de trait."}, {"shot": "sel-bar", "t": "Dupliquer, garder, supprimer", "p": "La barre du haut copie la sélection, l’enregistre comme autocollant, ou la supprime."}]}, {"key": "tutUndo", "name": "Gribouiller et annuler", "steps": [{"shot": "scratch-out", "t": "Le raturer", "p": "Gribouillez vite par-dessus une erreur, comme sur papier, et elle disparaît. « Annuler » apparaît en bas."}, {"shot": "undo", "t": "Annuler et rétablir", "p": "Les flèches en haut à droite annulent et rétablissent. Sur un écran tactile, touchez à deux doigts pour annuler, à trois pour rétablir."}]}, {"key": "tutText", "name": "Texte et écriture", "steps": [{"shot": "text-type", "t": "Taper", "p": "Choisissez l’outil texte et touchez là où va le texte. La barre au-dessus règle la police, la taille et la couleur. Touchez deux fois un texte pour le modifier."}, {"shot": "text-ink", "t": "Écrire à la main", "p": "Activez « Convertir l’écriture en texte » dans les Réglages, et ce que vous écrivez à la main devient du texte."}]}, {"key": "tutPics", "name": "Images et autocollants", "steps": [{"shot": "pic-import", "t": "Ajouter une image", "p": "« Importer… » place une image, ou les pages d’un PDF, sur le tableau."}, {"shot": "pic-edit", "t": "La redimensionner et la tourner", "p": "Une image arrive sélectionnée : déplacez-la, redimensionnez-la par ses coins ou ses côtés, et tournez-la avec la poignée."}, {"shot": "sticker", "t": "Autocollants", "p": "« Enregistrer comme autocollant » garde un dessin pour le réutiliser. Le bouton autocollant du dock le place sur n’importe quel tableau."}]}, {"key": "tutPdf", "name": "PDF et feuilles", "steps": [{"shot": "pdf-menu", "t": "Ouvrez un PDF ou une feuille", "p": "Dans le menu, « Ouvrir depuis… » ouvre un PDF en pages à annoter. « Nouvelle feuille… » commence une page d’un format de papier fixe."}, {"shot": "pdf-sizes", "t": "Choisissez un format", "p": "Formats A et B, papier nord-américain, diapos et carrés, en portrait ou en paysage."}, {"shot": "pdf-annotate", "t": "Écrivez, surlignez, ajoutez des pages", "p": "Écrivez et surlignez directement sur la page. Le + au-dessus ou en dessous des pages en ajoute une."}, {"shot": "pdf-pages", "t": "Ajouter ou retirer des pages", "p": "Le + au-dessus ou en dessous des pages en ajoute une de même taille. Tant qu’une page d’extrémité est vide, une corbeille à côté la supprime."}]}, {"key": "tutFiles", "name": "Galerie et fichiers", "steps": [{"shot": "save-gallery", "t": "Gardez vos tableaux dans la galerie", "p": "« Enregistrer dans la galerie » range vos tableaux en dossiers, avec aperçus. « Sauvegarder… » enregistre toute la galerie dans un seul fichier."}, {"shot": "save-file", "t": "Enregistrer dans un fichier", "p": "« Enregistrer sous… » écrit un fichier .whtbd où vous voulez, et « Ouvrir depuis… » le rouvre. Ctrl + S enregistre au même endroit."}, {"shot": "save-backup", "t": "Sauvegarder et restaurer", "p": "« Sauvegarder… » enregistre toute la galerie dans un fichier, « Restaurer… » la récupère, et « Ajouter des tableaux… » ajoute des fichiers isolés."}]}, {"key": "tutShare", "name": "Exporter et partager", "steps": [{"shot": "save-export", "t": "Exporter", "p": "PNG, JPEG, SVG, PDF et plus. Chaque export contient le tableau, pour pouvoir le rouvrir et le modifier."}, {"shot": "export-pattern", "t": "Inclure le motif", "p": "Activez « Motif du fond » pour exporter aussi les points, les lignes ou la grille."}, {"shot": "save-share", "t": "Partagez un lien", "p": "« Lien de partage… » met tout le tableau dans un lien. Il ne passe par aucun serveur, et chacun obtient sa propre copie."}, {"shot": "open-link", "t": "Ouvrir un lien partagé", "p": "Dans l’app installée, qui n’a pas de barre d’adresse, « Ouvrir un lien partagé… » ouvre un lien qu’on vous a envoyé."}]}, {"key": "tutSettings", "name": "Réglages", "steps": [{"shot": "set-theme", "t": "Clair, sombre et couleur du fond", "p": "Les Réglages choisissent le thème et la couleur du tableau : clair, sombre, selon le thème, ou une couleur que vous mélangez."}, {"shot": "set-pattern", "t": "Points, lignes ou grille", "p": "Le fond peut être uni, à points, ligné comme un cahier, ou quadrillé."}, {"shot": "set-lang", "t": "Langue", "p": "L’app parle 14 langues et suit votre appareil ; vous pouvez en choisir une autre ici."}]}]}</script>
+    </div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <div class="who">
+      <img src="../../img/icon.svg" alt="" width="24" height="24">
+      <span>Nemes Dániel © 2026-now</span>
+    </div>
+    <nav class="links" aria-label="Footer">
+      <a href="https://citromoseper.github.io/Whiteboard/">Ouvrir l’app</a>
+      <a href="../../fr/features/">Fonctions</a>
+      <a href="../../fr/tutorials/">Tutoriels</a>
+      <a href="../../fr/support/">Soutenir</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard">Code source</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/LICENSE">Licence</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/THIRD-PARTY-NOTICES.md">Mentions de tiers</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../js/site.js"></script>
+</body>
+</html>

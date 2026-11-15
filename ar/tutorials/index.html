@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الشروحات – Whiteboard</title>
+<meta name="description" content="سبورة سريعة للقلم واللمس والفأرة تعمل مباشرة في متصفحك. تستقيم الأشكال، وتملأ الألوان بالسحب، وتبقى لوحاتك على جهازك. تُظهر كل خطوة أين تضغط. جرّبها بنفسك أثناء القراءة.">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://citromoseper.github.io/Whiteboard-site/ar/tutorials/">
+<link rel="alternate" hreflang="ar" href="https://citromoseper.github.io/Whiteboard-site/ar/tutorials/">
+<link rel="alternate" hreflang="zh" href="https://citromoseper.github.io/Whiteboard-site/zh/tutorials/">
+<link rel="alternate" hreflang="en" href="https://citromoseper.github.io/Whiteboard-site/tutorials/">
+<link rel="alternate" hreflang="fr" href="https://citromoseper.github.io/Whiteboard-site/fr/tutorials/">
+<link rel="alternate" hreflang="de" href="https://citromoseper.github.io/Whiteboard-site/de/tutorials/">
+<link rel="alternate" hreflang="hi" href="https://citromoseper.github.io/Whiteboard-site/hi/tutorials/">
+<link rel="alternate" hreflang="hu" href="https://citromoseper.github.io/Whiteboard-site/hu/tutorials/">
+<link rel="alternate" hreflang="it" href="https://citromoseper.github.io/Whiteboard-site/it/tutorials/">
+<link rel="alternate" hreflang="ja" href="https://citromoseper.github.io/Whiteboard-site/ja/tutorials/">
+<link rel="alternate" hreflang="pt" href="https://citromoseper.github.io/Whiteboard-site/pt/tutorials/">
+<link rel="alternate" hreflang="ru" href="https://citromoseper.github.io/Whiteboard-site/ru/tutorials/">
+<link rel="alternate" hreflang="es" href="https://citromoseper.github.io/Whiteboard-site/es/tutorials/">
+<link rel="alternate" hreflang="tr" href="https://citromoseper.github.io/Whiteboard-site/tr/tutorials/">
+<link rel="alternate" hreflang="uk" href="https://citromoseper.github.io/Whiteboard-site/uk/tutorials/">
+<link rel="alternate" hreflang="x-default" href="https://citromoseper.github.io/Whiteboard-site/tutorials/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whiteboard">
+<meta property="og:title" content="الشروحات – Whiteboard">
+<meta property="og:description" content="سبورة سريعة للقلم واللمس والفأرة تعمل مباشرة في متصفحك. تستقيم الأشكال، وتملأ الألوان بالسحب، وتبقى لوحاتك على جهازك. تُظهر كل خطوة أين تضغط. جرّبها بنفسك أثناء القراءة.">
+<meta property="og:url" content="https://citromoseper.github.io/Whiteboard-site/ar/tutorials/">
+<meta property="og:image" content="https://citromoseper.github.io/Whiteboard-site/img/og.png">
+<meta property="og:locale" content="ar">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../img/icon-180.png">
+<link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<script>
+  // The theme before the first paint, so nothing flashes.
+  (function () { try { var t = localStorage.getItem('site.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {} })();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://citromoseper.github.io/Whiteboard-site/ar/"}, {"@type": "ListItem", "position": 2, "name": "الشروحات", "item": "https://citromoseper.github.io/Whiteboard-site/ar/tutorials/"}]}</script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+
+<header class="top">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="../../ar/">
+      <img src="../../img/icon.svg" alt="" width="34" height="34">
+      <span>Whiteboard</span>
+    </a>
+    <div class="nav-links">
+      <a class="opt" href="../../ar/features/">الميزات</a>
+      <a class="opt" href="../../ar/tutorials/" aria-current="page">الشروحات</a>
+      <a class="opt" href="../../ar/support/">الدعم</a>
+      <a class="opt" href="https://github.com/CITROMOSEPER/Whiteboard">GitHub</a>
+      <div class="tools">
+        <div class="lang">
+          <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="اللغة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+            <span id="lang-name">العربية</span>
+          </button>
+          <ul id="lang-list" hidden><li><a href="../../ar/tutorials/" hreflang="ar" lang="ar" data-lang="ar" aria-current="true"><span>العربية</span><small>Arabic</small></a></li><li><a href="../../zh/tutorials/" hreflang="zh" lang="zh" data-lang="zh"><span>中文（普通话）</span><small>Chinese (Mandarin)</small></a></li><li><a href="../../tutorials/" hreflang="en" lang="en" data-lang="en"><span>English</span><small></small></a></li><li><a href="../../fr/tutorials/" hreflang="fr" lang="fr" data-lang="fr"><span>Français</span><small>French</small></a></li><li><a href="../../de/tutorials/" hreflang="de" lang="de" data-lang="de"><span>Deutsch</span><small>German</small></a></li><li><a href="../../hi/tutorials/" hreflang="hi" lang="hi" data-lang="hi"><span>हिन्दी</span><small>Hindi</small></a></li><li><a href="../../hu/tutorials/" hreflang="hu" lang="hu" data-lang="hu"><span>Magyar</span><small>Hungarian</small></a></li><li><a href="../../it/tutorials/" hreflang="it" lang="it" data-lang="it"><span>Italiano</span><small>Italian</small></a></li><li><a href="../../ja/tutorials/" hreflang="ja" lang="ja" data-lang="ja"><span>日本語</span><small>Japanese</small></a></li><li><a href="../../pt/tutorials/" hreflang="pt" lang="pt" data-lang="pt"><span>Português</span><small>Portuguese</small></a></li><li><a href="../../ru/tutorials/" hreflang="ru" lang="ru" data-lang="ru"><span>Русский</span><small>Russian</small></a></li><li><a href="../../es/tutorials/" hreflang="es" lang="es" data-lang="es"><span>Español</span><small>Spanish</small></a></li><li><a href="../../tr/tutorials/" hreflang="tr" lang="tr" data-lang="tr"><span>Türkçe</span><small>Turkish</small></a></li><li><a href="../../uk/tutorials/" hreflang="uk" lang="uk" data-lang="uk"><span>Українська</span><small>Ukrainian</small></a></li></ul>
+        </div>
+        <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" aria-label="الوضع الداكن" title="الوضع الداكن">
+          <span class="knob">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="#ffe14d" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          </span>
+        </button>
+      </div>
+      <a class="btn-pill" href="https://citromoseper.github.io/Whiteboard/">افتح التطبيق</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="block first" id="tutorials">
+    <div class="wrap">
+      <div class="tut-head">
+        <div class="section-head">
+          <h1 class="display">تتعلمه في دقائق</h1>
+          <p>تُظهر كل خطوة أين تضغط. جرّبها بنفسك أثناء القراءة.</p>
+        </div>
+        <a href="https://github.com/CITROMOSEPER/Whiteboard#readme">الدليل الكامل</a>
+      </div>
+      <div class="tabs" role="tablist" id="tut-tabs"><button role="tab" id="tab-0" aria-selected="true" tabindex="0">البداية</button><button role="tab" id="tab-1" aria-selected="false" tabindex="-1">القلم والألوان</button><button role="tab" id="tab-2" aria-selected="false" tabindex="-1">قلم التمييز والممحاة والليزر</button><button role="tab" id="tab-3" aria-selected="false" tabindex="-1">الأشكال والألوان</button><button role="tab" id="tab-4" aria-selected="false" tabindex="-1">التحديد</button><button role="tab" id="tab-5" aria-selected="false" tabindex="-1">الشطب والتراجع</button><button role="tab" id="tab-6" aria-selected="false" tabindex="-1">النص والكتابة اليدوية</button><button role="tab" id="tab-7" aria-selected="false" tabindex="-1">الصور والملصقات</button><button role="tab" id="tab-8" aria-selected="false" tabindex="-1">ملفات PDF والأوراق</button><button role="tab" id="tab-9" aria-selected="false" tabindex="-1">المعرض والملفات</button><button role="tab" id="tab-10" aria-selected="false" tabindex="-1">التصدير والمشاركة</button><button role="tab" id="tab-11" aria-selected="false" tabindex="-1">الإعدادات</button></div>
+      <div class="tutorial" role="tabpanel" id="tut-panel" aria-labelledby="tab-0">
+        <figure class="shot">
+          <img id="tut-img" src="../../img/shots/start-tools-light.webp" alt="اختر أداة ولونًا" width="1536" height="960">
+          <button class="nav-btn prev" id="tut-prev" aria-label="الخطوة السابقة" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="nav-btn next" id="tut-next" aria-label="الخطوة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </figure>
+        <ol class="steps" id="tut-steps"><li><button aria-current="step"><span class="num">1</span><b>اختر أداة ولونًا</b><span class="t">في الشريط بالأسفل القلم وقلم التمييز والممحاة والنص وغيرها، وبجانبها ألوانك.</span></button></li><li><button><span class="num">2</span><b>اضبط الفرشاة</b><span class="t">تضبط الأشرطة على اليسار السُمك والشفافية. ويختار الزر أسفلها نوع الخط.</span></button></li><li><button><span class="num">3</span><b>تنقّل</b><span class="t">اسحب بإصبعين أو مرّر للتنقل، وقرّب بإصبعين أو بـ Ctrl مع عجلة الفأرة للتكبير. «ملاءمة المحتوى» تعيد كل شيء إلى العرض.</span></button></li></ol>
+      </div>
+      <script type="application/json" id="tut-data">{"tutorials": [{"key": "tutStart", "name": "البداية", "steps": [{"shot": "start-tools", "t": "اختر أداة ولونًا", "p": "في الشريط بالأسفل القلم وقلم التمييز والممحاة والنص وغيرها، وبجانبها ألوانك."}, {"shot": "start-brush", "t": "اضبط الفرشاة", "p": "تضبط الأشرطة على اليسار السُمك والشفافية. ويختار الزر أسفلها نوع الخط."}, {"shot": "start-move", "t": "تنقّل", "p": "اسحب بإصبعين أو مرّر للتنقل، وقرّب بإصبعين أو بـ Ctrl مع عجلة الفأرة للتكبير. «ملاءمة المحتوى» تعيد كل شيء إلى العرض."}]}, {"key": "tutPen", "name": "القلم والألوان", "steps": [{"shot": "pen-dash", "t": "اختر نوع الخط", "p": "يختار الزر أسفل شريط الشفافية بين متصل ومنقّط ومتقطع وشرطات طويلة وشرطة ونقطة."}, {"shot": "pen-mixer", "t": "امزج أي لون", "p": "يفتح مربع قوس قزح خلّاط الألوان مع HEX وRGB وHSL، وقطّارة تلتقط لونًا من اللوحة."}, {"shot": "pen-pressure", "t": "ارسم بالضغط", "p": "شغّل «الحساسية للضغط» في الإعدادات: اضغط بالقلم أكثر فيصبح الخط أعرض."}]}, {"key": "tutHl", "name": "قلم التمييز والممحاة والليزر", "steps": [{"shot": "hl-highlight", "t": "ميّز", "p": "لقلم التمييز ألوان نيون خاصة به. ينزلق تحت الكتابة فتبقى واضحة."}, {"shot": "hl-eraser", "t": "امسح", "p": "تمسح الممحاة الحبر أينما مرّت، ويضبط الشريط على اليسار حجمها. يعمل طرف الممحاة في القلم أيضًا."}, {"shot": "hl-laser", "t": "أشر بالليزر", "p": "يُظهر مؤشر الليزر نقطة متوهجة بأثر قصير للعروض. لا يرسم أبدًا، والسحب يحرّك اللوحة."}]}, {"key": "tutShapes", "name": "الأشكال والألوان", "steps": [{"shot": "shapes-snap", "t": "توقّف ليستقيم", "p": "أنهِ الخط وتوقّف لحظة: يصبح دائرة أو خطًا أو مثلثًا أو مستطيلًا نظيفًا."}, {"shot": "shapes-fill", "t": "اسحب لونًا إلى الداخل", "p": "اسحب لونًا من الشريط وأفلته داخل شكل مغلق لتعبئته."}, {"shot": "shapes-recolour", "t": "غيّر لون خط", "p": "أفلت لونًا على خط أو نص أو تعبئة لتغيير لونه. ويبقى الخط المتقطع متقطعًا."}]}, {"key": "tutSelect", "name": "التحديد", "steps": [{"shot": "sel-lasso", "t": "حدّد", "p": "بأداة التحديد اضغط على عنصر، أو ارسم حلقة حول عدة عناصر معًا."}, {"shot": "sel-handles", "t": "حرّك وغيّر الحجم وأدِر", "p": "اسحب داخل الإطار للتحريك، ومن زاوية أو جانب لتغيير الحجم، ومن المقبض أعلاه للتدوير. إصبع آخر أو Shift يثبّت على 45°."}, {"shot": "shapes-style", "t": "غيّره لاحقًا", "p": "باستخدام أداة التحديد اضغط على شكل. يغيّر الشريط أسفله لونه وسُمكه ونوع خطه."}, {"shot": "sel-bar", "t": "كرّر واحفظ واحذف", "p": "يكرّر الشريط العلوي التحديد، أو يحفظه كملصق، أو يحذفه."}]}, {"key": "tutUndo", "name": "الشطب والتراجع", "steps": [{"shot": "scratch-out", "t": "اشطبه", "p": "اخربش بسرعة ذهابًا وإيابًا فوق الخطأ كما على الورق فيختفي. ويظهر «تراجع» في الأسفل."}, {"shot": "undo", "t": "التراجع والإعادة", "p": "يتراجع السهمان أعلى اليمين ويعيدان. على الشاشة اللمسية، انقر بإصبعين للتراجع وبثلاثة للإعادة."}]}, {"key": "tutText", "name": "النص والكتابة اليدوية", "steps": [{"shot": "text-type", "t": "اكتب بلوحة المفاتيح", "p": "اختر أداة النص واضغط حيث تريد النص. يضبط الشريط أعلاه الخط والحجم واللون. انقر مرتين على نص لتحريره."}, {"shot": "text-ink", "t": "اكتب بخط يدك", "p": "شغّل «تحويل خط اليد إلى نص» في الإعدادات، فيتحوّل ما تكتبه بيدك إلى نص."}]}, {"key": "tutPics", "name": "الصور والملصقات", "steps": [{"shot": "pic-import", "t": "أضف صورة", "p": "«استيراد…» يضع صورة أو صفحات ملف PDF على اللوحة."}, {"shot": "pic-edit", "t": "غيّر حجمها وأدِرها", "p": "تصل الصورة محدّدة: حرّكها، وغيّر حجمها من زواياها أو جوانبها، وأدِرها بالمقبض."}, {"shot": "sticker", "t": "الملصقات", "p": "«حفظ كملصق» يحتفظ برسم لإعادة استخدامه. وزر الملصقات في الشريط يضعه على أي لوحة."}]}, {"key": "tutPdf", "name": "ملفات PDF والأوراق", "steps": [{"shot": "pdf-menu", "t": "افتح PDF أو ابدأ ورقة", "p": "في القائمة، «فتح من…» يفتح ملف PDF كصفحات للكتابة عليها. و«ورقة جديدة…» تبدأ صفحة بحجم ورق محدد."}, {"shot": "pdf-sizes", "t": "اختر حجم الورق", "p": "مقاسات A وB، وورق أمريكا الشمالية، والشرائح والمربعات، طوليًا أو عرضيًا."}, {"shot": "pdf-annotate", "t": "اكتب وميّز وأضف صفحات", "p": "اكتب وميّز مباشرة على الصفحة. وزر + فوق الصفحات أو تحتها يضيف صفحة أخرى."}, {"shot": "pdf-pages", "t": "أضف صفحات أو احذفها", "p": "زر + فوق الصفحات أو تحتها يضيف صفحة بالحجم نفسه. وما دامت صفحة طرفية فارغة، تحذفها سلة بجانبها."}]}, {"key": "tutFiles", "name": "المعرض والملفات", "steps": [{"shot": "save-gallery", "t": "احفظ لوحاتك في المعرض", "p": "«حفظ في المعرض» يحفظ لوحاتك في مجلدات مع معاينات. و«نسخ احتياطي…» يحفظ المعرض كله في ملف واحد."}, {"shot": "save-file", "t": "احفظ في ملف", "p": "«حفظ باسم…» يكتب ملف ‎.whtbd حيث تشاء، و«فتح من…» يفتحه مجددًا. ويحفظ Ctrl + S في المكان نفسه."}, {"shot": "save-backup", "t": "النسخ الاحتياطي والاستعادة", "p": "«نسخ احتياطي…» يحفظ المعرض كله في ملف واحد، و«استعادة…» يعيده، و«إضافة لوحات…» يضيف ملفات لوحات منفردة."}]}, {"key": "tutShare", "name": "التصدير والمشاركة", "steps": [{"shot": "save-export", "t": "التصدير", "p": "PNG وJPEG وSVG وPDF وغيرها. يحمل كل ملف مُصدَّر اللوحة بداخله، فيمكن فتحها وتعديلها من جديد."}, {"shot": "export-pattern", "t": "ضمّن النقش", "p": "شغّل «نقش اللوحة» لتصدير النقاط أو الخطوط أو الشبكة أيضًا."}, {"shot": "save-share", "t": "شارك رابطًا", "p": "«رابط مشاركة…» يضع اللوحة كلها في رابط. لا يمر عبر أي خادم، ومن يفتحه يحصل على نسخته الخاصة."}, {"shot": "open-link", "t": "افتح رابطًا مشتركًا", "p": "في التطبيق المثبّت، الذي لا شريط عنوان فيه، يفتح «فتح رابط مشاركة…» رابطًا أُرسل إليك."}]}, {"key": "tutSettings", "name": "الإعدادات", "steps": [{"shot": "set-theme", "t": "فاتح وداكن ولون اللوحة", "p": "تحدّد الإعدادات المظهر ولون اللوحة: فاتح أو داكن أو حسب المظهر أو لون تمزجه بنفسك."}, {"shot": "set-pattern", "t": "نقاط أو خطوط أو شبكة", "p": "يمكن أن تكون اللوحة سادة أو منقّطة أو مسطّرة كالدفتر أو بشبكة."}, {"shot": "set-lang", "t": "اللغة", "p": "يتحدث التطبيق 14 لغة ويتبع جهازك، ويمكنك اختيار لغة أخرى هنا."}]}]}</script>
+    </div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <div class="who">
+      <img src="../../img/icon.svg" alt="" width="24" height="24">
+      <span>Nemes Dániel © 2026-now</span>
+    </div>
+    <nav class="links" aria-label="Footer">
+      <a href="https://citromoseper.github.io/Whiteboard/">افتح التطبيق</a>
+      <a href="../../ar/features/">الميزات</a>
+      <a href="../../ar/tutorials/">الشروحات</a>
+      <a href="../../ar/support/">الدعم</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard">الشيفرة المصدرية</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/LICENSE">الترخيص</a>
+      <a href="https://github.com/CITROMOSEPER/Whiteboard/blob/main/THIRD-PARTY-NOTICES.md">إشعارات الأطراف الثالثة</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../js/site.js"></script>
+</body>
+</html>
