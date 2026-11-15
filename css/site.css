@@ -68,7 +68,7 @@ body {
 }
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 .wrap { max-width: 1180px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
@@ -315,7 +315,7 @@ a.more svg { width: 18px; height: 18px; }
 [dir="rtl"] a.more svg { transform: scaleX(-1); }
 .teasers { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .teaser { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink); }
-.teaser img { border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); aspect-ratio: 16 / 10; object-fit: cover; transition: transform 200ms ease; }
+.teaser img { width: 100%; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); aspect-ratio: 16 / 10; object-fit: cover; transition: transform 200ms ease; }
 .teaser:hover img { transform: translateY(-3px); }
 .teaser span { font-family: 'Bricolage Grotesque', Inter, sans-serif; font-weight: 700; font-size: 20px; }
 .teaser:hover { color: var(--accent); }
