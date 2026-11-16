@@ -188,6 +188,27 @@
    ]
   },
   {
+   "key": "tutAi",
+   "steps": [
+    [
+     "a1",
+     "ai-key"
+    ],
+    [
+     "a2",
+     "ai-tidy"
+    ],
+    [
+     "a3",
+     "ai-solve"
+    ],
+    [
+     "a4",
+     "ai-plot"
+    ]
+   ]
+  },
+  {
    "key": "tutPics",
    "steps": [
     [

@@ -239,4 +239,57 @@ def scenes(SKETCH):
   const r = H.rect('#lang-menu');
   H.arrow([r.x - 150, r.y + 60], '#lang-menu', -0.25);
 ''',
+        # ---- AI (bring your own key)
+        'ai-key': SKETCH + r'''
+  await H.menu('settings'); await H.sleep(300);
+  H.$('#ai-key').value = 'just-a-picture-not-a-real-key';
+  H.$('#ai-title').scrollIntoView({ block: 'start' }); await H.sleep(350);
+  const row = H.$('#ai-key').closest('.row');
+  H.ring(row, 6, 60);
+  H.ring('#ai-provider', 5, 61);
+  const r = H.rect(row);
+  H.arrow([r.x - 160, r.y + r.h + 90], row, -0.25);
+''',
+        'ai-tidy': r'''
+  H.text(150, 130, 'Area of a circle', { size: 40 });
+  H.text(170, 215, 'A = π · r²', { size: 50 });
+  H.text(170, 300, '(x + 1) / 2 = √9', { size: 46 });
+  H.redraw(); await H.sleep(200);
+  H.$('.tool[data-tool="select"]').click(); await H.sleep(100);
+  const loop = [[120, 110], [560, 100], [600, 260], [560, 400], [130, 410], [100, 250], [120, 110]];
+  H.pointer('pointerdown', ...loop[0]);
+  for (let i = 1; i < loop.length; i++) for (let k = 1; k <= 8; k++) {
+    const a = loop[i - 1], b = loop[i];
+    H.pointer('pointermove', a[0] + (b[0] - a[0]) * k / 8, a[1] + (b[1] - a[1]) * k / 8);
+  }
+  H.pointer('pointerup', ...loop[loop.length - 1]); await H.sleep(400);
+  H.$('#sel-ai').click(); await H.sleep(400);
+  H.ring('#sel-ai', 6, 62);
+  H.ring('[data-ai="tidy"]', 6, 63);
+  const r = H.rect('[data-ai="tidy"]');
+  H.arrow([r.x + r.w + 190, r.y + 170], [r.x + r.w + 18, r.y + r.h / 2 + 4], -0.3);
+''',
+        'ai-solve': r'''
+  H.text(170, 120, '2x + 3 = 7', { size: 56 });
+  const A = H.A();
+  A.doc.strokes.push({ tool: 'text', x: 175, y: 215, rot: 0, font: 'hand', size: 40, color: '#007aff', opacity: 1, width: 0, math: true,
+    text: '$2x = 7 - 3$\n$2x = 4$\n$x = \\frac{4}{2}$\n$x = 2$  ✓' });
+  H.redraw(); await H.sleep(200);
+  H.toast('Solved, and the answer checks out', 'Undo');
+  H.ring([165, 205, 290, 270], 12, 64);
+  H.arrow([640, 260], [480, 330], -0.25);
+''',
+        'ai-plot': r'''
+  const A = H.A();
+  A.doc.strokes.push({ tool: 'plot', x: 150, y: 70, w: 640, h: 380, rot: 0, opacity: 1, width: 0, cx: 0, cy: 0, span: 20,
+    fns: [{ src: 'f(x) = sin(x)', color: '#c74440' }, { src: 'y = x^2/4 - 2', color: '#2d70b3' }] });
+  H.redraw(); await H.sleep(200);
+  H.$('.tool[data-tool="select"]').click(); await H.sleep(100);
+  await H.tap(600, 300); await H.sleep(300);
+  H.$('#pb-explore').click(); await H.sleep(400);
+  H.ring('#pb-explore', 6, 65);
+  H.ring('#pb-edit', 6, 66);
+  const r = H.rect('#pb-explore');
+  H.arrow([r.x + r.w + 160, r.y + 40], '#pb-explore', 0.25);
+''',
     }

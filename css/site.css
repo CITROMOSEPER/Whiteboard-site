@@ -192,6 +192,9 @@ header.top nav { display: flex; flex-wrap: wrap; align-items: center; justify-co
 
 #features .wrap { padding-top: 104px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 48px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+/* Eight cards: in three columns the AI card spans two, so the last row is full. */
+.cards { container-type: inline-size; }
+@container (min-width: 940px) { .card.wide { grid-column: span 2; } }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
 .card svg { width: 48px; height: 48px; }
 .card h3 { margin: 0; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }

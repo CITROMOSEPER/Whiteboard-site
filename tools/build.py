@@ -155,12 +155,16 @@ CARD_ICONS = [
     '<path d="M6 30h36" stroke="#ffe14d" stroke-width="12" stroke-linecap="butt"/><path class="ink" d="M10 32c3-10 6-14 8-10s2 8 6 2 6-8 8-2" stroke-width="3.5"/>',
     '<rect class="ink" x="10" y="6" width="28" height="36" rx="4" stroke-width="3.5"/><path d="M17 17h14M17 24h14M17 31h8" stroke="#1a6bff" stroke-width="3.5"/>',
     '<path class="ink" d="M8 36c4-8 8-22 12-22s2 14 6 14 4-10 8-10" stroke-width="3.5"/><path d="M30 38h12" stroke="#1a6bff" stroke-width="3.5"/>',
+    # AI for handwriting: a sparkle over a written x²
+    '<path d="M33 5l2.6 6.4L42 14l-6.4 2.6L33 23l-2.6-6.4L24 14l6.4-2.6z" fill="#af52de" fill-opacity="0.22" stroke="#af52de" stroke-width="3"/><path class="ink" d="M7 28l12 13M19 28L7 41" stroke-width="3.5"/><path class="ink" d="M23 26c1-3 6-3 6 0s-6 6-6 7h6" stroke-width="3"/>',
+    # The key stays on the device: a closed padlock
+    '<rect x="9" y="21" width="30" height="21" rx="5" fill="#34c759" fill-opacity="0.18" stroke="#34c759" stroke-width="3.5"/><path class="ink" d="M16 21v-6a8 8 0 0 1 16 0v6" stroke-width="3.5"/><circle class="ink" cx="24" cy="30" r="3" stroke-width="3"/><path class="ink" d="M24 33v4" stroke-width="3"/>',
 ]
 
 
 def cards(T, level='h3'):
     return '<div class="cards">' + ''.join(
-        f'<article class="card"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icon}</svg>'
+        f'<article class="card{" wide" if i == 7 else ""}"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icon}</svg>'
         f'<{level} class="display">{T(f"f{i}t")}</{level}><p>{T(f"f{i}p")}</p></article>'
         for i, icon in enumerate(CARD_ICONS, 1)) + '</div>'
 
