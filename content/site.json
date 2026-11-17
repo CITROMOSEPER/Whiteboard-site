@@ -285,6 +285,23 @@
    ]
   },
   {
+   "key": "tutLive",
+   "steps": [
+    [
+     "l1",
+     "live-share"
+    ],
+    [
+     "l2",
+     "live-pointers"
+    ],
+    [
+     "l3",
+     "live-turn"
+    ]
+   ]
+  },
+  {
    "key": "tutSettings",
    "steps": [
     [

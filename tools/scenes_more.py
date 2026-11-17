@@ -292,4 +292,51 @@ def scenes(SKETCH):
   const r = H.rect('#pb-explore');
   H.arrow([r.x + r.w + 160, r.y + 40], '#pb-explore', 0.25);
 ''',
+        # ---- Live boards (the meeting points are left out: the status shown is set by hand)
+        'live-share': LIVE + SKETCH + r'''
+  await H.menu('share'); await H.sleep(900);
+  live(1);
+  { const i = H.$('#share-link'); i.value = i.value.replace(location.origin + location.pathname, 'https://citromoseper.github.io/Whiteboard/'); }
+  H.ring('#live-box', 6, 71);
+  const r = H.rect('#live-box');
+  H.arrow([r.x + r.w + 110, r.y - 70], [r.x + r.w + 12, r.y + 18], -0.3);
+''',
+        'live-pointers': LIVE + SKETCH + r'''
+  await H.menu('share'); await H.sleep(700);
+  H.$('#share [data-close]').click(); await H.sleep(300);
+  // A friend's line and pointer (green), and mine (red).
+  H.stroke([[150, 380], [210, 352], [270, 392], [330, 350], [390, 388], [440, 360]], { color: '#34c759', width: 5 });
+  H.redraw(); await H.sleep(150);
+  H.$('.tool[data-tool="laser"]').click(); await H.sleep(100);
+  H.pointer('pointermove', 600, 300, { buttons: 0 }); await H.sleep(30); H.pointer('pointermove', 612, 296, { buttons: 0 });
+  const friend = document.createElement('div');
+  friend.className = 'laser on'; friend.style.setProperty('--lc', '#34c759'); friend.style.transform = 'translate3d(452px, 356px, 0)';
+  document.body.appendChild(friend);
+  live(1);
+  H.toast(WB.t('tLiveJoined'));
+  H.ring('#live-pill', 6, 72);
+  const r = H.rect('#live-pill');
+  H.arrow([r.x + r.w + 150, r.y + 110], '#live-pill', 0.3);
+''',
+        'live-turn': r'''
+  await H.menu('settings'); await H.sleep(300);
+  H.$('#turn-url').value = 'turn:turn.example.com:3478';
+  const g = H.$('#turn-url').closest('.group');
+  g.previousElementSibling.scrollIntoView({ block: 'start' }); await H.sleep(350);
+  H.ring(H.$('#turn-url').closest('.row'), 6, 73);
+  const r = H.rect(H.$('#turn-url').closest('.row'));
+  H.arrow([r.x - 150, r.y + r.h + 90], [r.x - 8, r.y + r.h / 2], -0.25);
+''',
     }
+
+
+# Live boards in the screenshots: no meeting points are reached, and live(n) shows n others as here.
+LIVE = r'''
+  window.WebSocket = function () { return { readyState: 0, send() {}, close() {} }; };
+  const live = (n) => {
+    const pill = H.$('#live-pill'), box = H.$('#live-box');
+    pill.hidden = false; pill.classList.toggle('alone', !n);
+    pill.querySelector('span').textContent = n ? String(n + 1) : WB.t('livePill');
+    if (box) { box.hidden = false; box.classList.toggle('alone', !n); H.$('#live-state').textContent = n ? WB.t('liveConnected', { n }) : WB.t('liveWaiting'); }
+  };
+'''

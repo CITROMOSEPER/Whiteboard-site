@@ -159,12 +159,14 @@ CARD_ICONS = [
     '<path d="M33 5l2.6 6.4L42 14l-6.4 2.6L33 23l-2.6-6.4L24 14l6.4-2.6z" fill="#af52de" fill-opacity="0.22" stroke="#af52de" stroke-width="3"/><path class="ink" d="M7 28l12 13M19 28L7 41" stroke-width="3.5"/><path class="ink" d="M23 26c1-3 6-3 6 0s-6 6-6 7h6" stroke-width="3"/>',
     # The key stays on the device: a closed padlock
     '<rect x="9" y="21" width="30" height="21" rx="5" fill="#34c759" fill-opacity="0.18" stroke="#34c759" stroke-width="3.5"/><path class="ink" d="M16 21v-6a8 8 0 0 1 16 0v6" stroke-width="3.5"/><circle class="ink" cx="24" cy="30" r="3" stroke-width="3"/><path class="ink" d="M24 33v4" stroke-width="3"/>',
+    # Drawing together, live: two people's lines and their laser pointers (red and green)
+    '<path class="ink" d="M5 40c5-7 9-7 13-2s8 4 11-3" stroke-width="3.5"/><path d="M20 22c4-6 8-6 11-1s6 3 9-4" stroke="#34c759" stroke-width="3.5"/><circle cx="31" cy="35" r="8" fill="#ff3b30" fill-opacity="0.2"/><circle cx="31" cy="35" r="3.5" fill="#ff3b30"/><circle cx="40" cy="17" r="8" fill="#34c759" fill-opacity="0.2"/><circle cx="40" cy="17" r="3.5" fill="#34c759"/>',
 ]
 
 
 def cards(T, level='h3'):
     return '<div class="cards">' + ''.join(
-        f'<article class="card{" wide" if i == 7 else ""}"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icon}</svg>'
+        f'<article class="card{" wide" if i == 9 else ""}"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icon}</svg>'
         f'<{level} class="display">{T(f"f{i}t")}</{level}><p>{T(f"f{i}p")}</p></article>'
         for i, icon in enumerate(CARD_ICONS, 1)) + '</div>'
 

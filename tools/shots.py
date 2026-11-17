@@ -166,10 +166,14 @@ SCENES = {
   H.arrow([r.x + r.w + 120, r.y - 90], '#btn-export', -0.3);
 ''',
     'save-share': SKETCH + r'''
+  window.WebSocket = function () { return { readyState: 0, send() {}, close() {} }; };
   await H.menu('share'); await H.sleep(900);
+  H.$('#live-state').textContent = WB.t('liveWaiting');
+  H.$('#live-box').classList.add('alone');
+  { const i = H.$('#share-link'); i.value = i.value.replace(location.origin + location.pathname, 'https://citromoseper.github.io/Whiteboard/'); }
   H.ring('#share-copy', 8, 17);
   const r = H.rect('#share-copy');
-  H.arrow([r.x + r.w + 120, r.y - 110], '#share-copy', -0.3);
+  H.arrow([r.x - 110, r.y + r.h + 50], [r.x - 6, r.y + r.h / 2 + 6], 0.3);
 ''',
 }
 
