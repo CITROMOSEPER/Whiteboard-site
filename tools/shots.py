@@ -171,6 +171,7 @@ SCENES = {
   H.$('#live-state').textContent = WB.t('liveWaiting');
   H.$('#live-box').classList.add('alone');
   { const i = H.$('#share-link'); i.value = i.value.replace(location.origin + location.pathname, 'https://citromoseper.github.io/Whiteboard/'); }
+  H.$('#live-qr').innerHTML = WB.qrSvg('https://citromoseper.github.io/Whiteboard/#r=' + H.$('#live-code').textContent, 3);
   H.ring('#share-copy', 8, 17);
   const r = H.rect('#share-copy');
   H.arrow([r.x - 110, r.y + r.h + 50], [r.x - 6, r.y + r.h / 2 + 6], 0.3);

@@ -297,6 +297,7 @@ def scenes(SKETCH):
   await H.menu('share'); await H.sleep(900);
   live(1);
   { const i = H.$('#share-link'); i.value = i.value.replace(location.origin + location.pathname, 'https://citromoseper.github.io/Whiteboard/'); }
+  H.$('#live-qr').innerHTML = WB.qrSvg('https://citromoseper.github.io/Whiteboard/#r=' + H.$('#live-code').textContent, 3);
   H.ring('#live-box', 6, 71);
   const r = H.rect('#live-box');
   H.arrow([r.x + r.w + 110, r.y - 70], [r.x + r.w + 12, r.y + 18], -0.3);
@@ -311,12 +312,30 @@ def scenes(SKETCH):
   H.pointer('pointermove', 600, 300, { buttons: 0 }); await H.sleep(30); H.pointer('pointermove', 612, 296, { buttons: 0 });
   const friend = document.createElement('div');
   friend.className = 'laser on'; friend.style.setProperty('--lc', '#34c759'); friend.style.transform = 'translate3d(452px, 356px, 0)';
+  friend.dataset.name = 'Ben';
   document.body.appendChild(friend);
   live(1);
   H.toast(WB.t('tLiveJoined'));
   H.ring('#live-pill', 6, 72);
   const r = H.rect('#live-pill');
   H.arrow([r.x + r.w + 150, r.y + 110], '#live-pill', 0.3);
+''',
+        'live-people': LIVE + SKETCH + r'''
+  await H.menu('share'); await H.sleep(700);
+  H.$('#share [data-close]').click(); await H.sleep(300);
+  WB.live.setName('Anna');
+  live(2);
+  H.$('#live-pill').click(); await H.sleep(400);
+  // The others (no one is really connected here): Ben, and someone without a name yet.
+  const add = (color, name) => {
+    const li = document.createElement('li'), dot = document.createElement('i'), n = document.createElement('span');
+    dot.style.background = color; n.className = 'pp-name'; n.textContent = name;
+    li.append(dot, n); H.$('#people-list').appendChild(li);
+  };
+  add('#34c759', 'Ben'); add('#007aff', WB.t('peopleGuest', { n: 3 }));
+  H.ring('#people-list li.me', 4, 74);
+  const r = H.rect('#people-list li.me');
+  H.arrow([r.x + r.w + 170, r.y + 120], [r.x + r.w + 10, r.y + r.h / 2], 0.3);
 ''',
         'live-turn': r'''
   await H.menu('settings'); await H.sleep(300);
