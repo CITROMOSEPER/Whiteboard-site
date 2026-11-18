@@ -144,13 +144,6 @@ def scenes(SKETCH):
   const r = H.rect('#text-bar');
   H.arrow([r.x + r.w + 150, r.y - 80], '#text-bar', -0.25);
 ''',
-        'text-ink': SKETCH + r'''
-  await H.menu('settings'); await H.sleep(300);
-  const row = H.$('#lbl-ink').closest('.row'); row.scrollIntoView({ block: 'center' }); await H.sleep(300);
-  H.ring(row, 6, 36);
-  const r = H.rect(row);
-  H.arrow([r.x - 150, r.y + r.h + 100], row, -0.25);
-''',
         # ---- Pictures and stickers
         'pic-import': SKETCH + r'''
   await H.menu();
