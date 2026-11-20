@@ -108,13 +108,13 @@ SCENES = {
     'pdf-menu': SKETCH + r'''
   await H.menu();
   H.ring('[data-act="sheet"]', 6, 8);
-  H.ring('[data-act="open"]', 6, 9);
-  const r = H.rect('[data-act="open"]');
-  H.arrow([r.x + r.w + 190, r.y + 70], '[data-act="open"]', 0.22);
+  const r = H.rect('[data-act="sheet"]');
+  H.arrow([r.x + r.w + 190, r.y + 70], '[data-act="sheet"]', 0.22);
 ''',
     'pdf-sizes': SKETCH + r'''
   await H.menu('sheet'); await H.sleep(300);
   const a4 = H.byText('.sz-tile b', 'A4').parentElement;
+  a4.scrollIntoView({ block: 'center' }); await H.sleep(300);
   H.ring(a4, 8, 10);
   const r = H.rect(a4);
   H.arrow([r.x + r.w + 150, r.y - 70], a4, -0.3);
